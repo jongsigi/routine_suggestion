@@ -1,5 +1,5 @@
 import { redirect } from "next/navigation";
 
-export default function EmptyPage() {
+export default function noneSkinType() {
   redirect("/default-channel");
 }
