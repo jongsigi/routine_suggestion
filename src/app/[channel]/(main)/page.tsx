@@ -1,4 +1,4 @@
-import { ProductList } from "@/ui/components/ProductList";
+// import { ProductList } from "@/ui/components/ProductList";
 import SkinTypeList from '@/../public/SkinTypeList.json'
 
 export const metadata = {
