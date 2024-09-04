@@ -19,28 +19,8 @@ export function NavLinks ({ channel }: { channel: string }) {
 						</NavLink>
 					);
 				}
-				if (item.collection) {
-					return (
-						<NavLink key={item.id} href={`/${item.collection.slug}`}>
-							{item.collection.name}
-						</NavLink>
-					);
-				}
-				if (item.page) {
-					return (
-						<NavLink key={item.id} href={`/pages/${item.page.slug}`}>
-							{item.page.title}
-						</NavLink>
-					);
-				}
-				if (item.url) {
-					return (
-						<Link key={item.id} href={item.url}>
-							{item.name}
-						</Link>
-					);
-				}
-				return null;
+				else{ return null ;}
+				
 			})}
 		</>
 	);
