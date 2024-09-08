@@ -1,8 +1,9 @@
 import { LinkWithChannel } from "../atoms/LinkWithChannel";
 import { ProductImageWrapper } from "@/ui/atoms/ProductImageWrapper";
 
-export function ProductElement({ typeData }) {
-  const product = typeData.product;
+export async function ProductElement(typeData) {
+  const product = await typeData.typeData;
+  console.log(product);
 
   return (
     <li data-testid="ProductElement">
@@ -12,8 +13,8 @@ export function ProductElement({ typeData }) {
             <ProductImageWrapper
               src={product.thumbnail.url}
               alt={product.thumbnail.alt ?? ""}
-              width={512}
-              height={512}
+              width={256}
+              height={256}
               sizes={"512px"}
             />
           )}
@@ -22,12 +23,12 @@ export function ProductElement({ typeData }) {
               <h3 className="mt-1 text-sm font-semibold text-neutral-900">
                 {product.name}
               </h3>
-              <p
+              {/* <p
                 className="mt-1 text-sm text-neutral-500"
                 data-testid="ProductElement_Category"
               >
                 {product.category?.name}
-              </p>
+              </p> */}
             </div>
           </div>
         </div>
