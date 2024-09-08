@@ -1,6 +1,6 @@
 import { ProductElement } from "./ProductElement";
 
-export function ProductList({ types }) {
+export function ProductList(types: any) {
   const typelist = Array.isArray(types) ? types : [];
 
   return (
