@@ -1,75 +1,42 @@
 {
-    "collection": {
-      "name": "Featured Products",
-      "description": "A collection of featured products.",
-      "seoDescription": "Discover our featured products.",
-      "seoTitle": "Featured Products",
-      "products": {
-        "edges": [
-          {
-            "node": {
-              "id": "prod1",
-              "name": "Product 1",
-              "slug": "product-1",
-              "pricing": {
-                "priceRange": {
-                  "start": {
-                    "gross": {
-                      "amount": 20.00,
-                      "currency": "USD"
-                    }
-                  },
-                  "stop": {
-                    "gross": {
-                      "amount": 30.00,
-                      "currency": "USD"
-                    }
-                  }
-                }
-              },
-              "category": {
-                "id": "cat1",
-                "name": "Category 1"
-              },
-              "thumbnail": {
-                "url": "https://example.com/thumbnail1.webp",
-                "alt": "Product 1 Thumbnail"
-              }
-            }
-          },
-          {
-            "node": {
-              "id": "prod2",
-              "name": "Product 2",
-              "slug": "product-2",
-              "pricing": {
-                "priceRange": {
-                  "start": {
-                    "gross": {
-                      "amount": 25.00,
-                      "currency": "USD"
-                    }
-                  },
-                  "stop": {
-                    "gross": {
-                      "amount": 35.00,
-                      "currency": "USD"
-                    }
-                  }
-                }
-              },
-              "category": {
-                "id": "cat2",
-                "name": "Category 2"
-              },
-              "thumbnail": {
-                "url": "https://example.com/thumbnail2.webp",
-                "alt": "Product 2 Thumbnail"
-              }
+  "collection": {
+    "name": "Featured Products",
+    "description": "A collection of featured products.",
+    "seoDescription": "Discover our featured products.",
+    "seoTitle": "Featured Products",
+    "types": {
+      "edges": [
+        {
+          "node": {
+            "id": "DRNT",
+            "name": "DRNT",
+            "slug": "type-1",
+            "category": {
+              "id": "DRNT",
+              "name": "DRNT"
+            },
+            "thumbnail": {
+              "url": "/img/DRNT.webp",
+              "alt": "Product 1 Thumbnail"
             }
           }
-        ]
-      }
+        },
+        {
+          "node": {
+            "id": "ORPW",
+            "name": "ORPW",
+            "slug": "type-2",
+            "category": {
+              "id": "ORPW",
+              "name": "ORPW"
+            },
+            "thumbnail": {
+              "url": "/img/ORPW.webp",
+              "alt": "Product 2 Thumbnail"
+            }
+          }
+        }
+      ]
     }
   }
-  
+}
