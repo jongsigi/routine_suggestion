@@ -1,7 +1,7 @@
 import { LinkWithChannel } from "../atoms/LinkWithChannel";
 import { ProductImageWrapper } from "@/ui/atoms/ProductImageWrapper";
 
-export function ProductElement(typeData) {
+export function ProductElement({ typeData }) {
   const product = typeData.product;
 
   return (
