@@ -1,10 +1,8 @@
 import { LinkWithChannel } from "../atoms/LinkWithChannel";
 import { ProductImageWrapper } from "@/ui/atoms/ProductImageWrapper";
 
-export async function ProductElement(typeData) {
+export async function ProductElement(typeData: any) {
   const product = await typeData.typeData;
-  console.log(product);
-
   return (
     <li data-testid="ProductElement">
       <LinkWithChannel href={`/products/${product.slug}`} key={product.id}>
