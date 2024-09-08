@@ -1,13 +1,12 @@
 import { ProductElement } from "./ProductElement";
 
-export function ProductList(types: any) {
-  const typelist = Array.isArray(types) ? types : [];
-
+export async function ProductList(types: any) {
+  const typelist = types.types;
   return (
     <ul
       role="list"
       data-testid="ProductList"
-      className="grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-3"
+      className="grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-4"
     >
       {typelist.map((typeData, index) => (
         <ProductElement

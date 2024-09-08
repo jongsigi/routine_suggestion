@@ -17,7 +17,7 @@
             },
             "thumbnail": {
               "url": "/img/DRNT.webp",
-              "alt": "Product 1 Thumbnail"
+              "alt": "Product-1 Thumbnail"
             }
           }
         },
@@ -32,7 +32,52 @@
             },
             "thumbnail": {
               "url": "/img/ORPW.webp",
-              "alt": "Product 2 Thumbnail"
+              "alt": "Product-2 Thumbnail"
+            }
+          }
+        },
+        {
+          "node": {
+            "id": "DRPT",
+            "name": "DRPT",
+            "slug": "type-3",
+            "category": {
+              "id": "DRPT",
+              "name": "DRPT"
+            },
+            "thumbnail": {
+              "url": "/img/DRPT.webp",
+              "alt": "Product-3 Thumbnail"
+            }
+          }
+        },
+        {
+          "node": {
+            "id": "DSPT",
+            "name": "DSPT",
+            "slug": "type-4",
+            "category": {
+              "id": "DSPT",
+              "name": "DSPT"
+            },
+            "thumbnail": {
+              "url": "/img/DSPT.webp",
+              "alt": "Product-4 Thumbnail"
+            }
+          }
+        },
+        {
+          "node": {
+            "id": "DRPW",
+            "name": "DRPW",
+            "slug": "type-5",
+            "category": {
+              "id": "DRPW",
+              "name": "DRPW"
+            },
+            "thumbnail": {
+              "url": "/img/DRPW.webp",
+              "alt": "Product-5 Thumbnail"
             }
           }
         }

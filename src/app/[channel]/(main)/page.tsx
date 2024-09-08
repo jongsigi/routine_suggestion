@@ -1,5 +1,5 @@
 // import { ProductList } from "@/ui/components/ProductList";
-import SkinTypeList from "@/../public/SkinTypeList.json";
+import SkinTypeList from "@public/SkinTypeList.json";
 import { ProductList } from "@/ui/components/ProductList";
 
 export const metadata = {
@@ -15,7 +15,6 @@ export default function Page({ params }: { params: { channel: string } }) {
   }
 
   const types = data.collection?.types.edges.map(({ node: type }) => type);
-
   return (
     <section className="mx-auto max-w-7xl p-8 pb-16">
       <h2 className="sr-only">Product list</h2>
