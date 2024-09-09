@@ -4,11 +4,17 @@ export type SkinTypesProps = {
     id: string;
     name: string;
     slug: string;
-    category: Record<string, unknown>;
-    thumbnail: Record<string, unknown>;
+    category: {
+      id: string;
+      name: string;
+    };
+    thumbnail: {
+      url: string;
+      alt: string;
+    };
   };
   
   export type SkinTypesListProps = {
-    types: SkinTypesProps[];
+    skintypes: SkinTypesProps[];
   };
   
