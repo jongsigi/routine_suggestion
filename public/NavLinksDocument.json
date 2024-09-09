@@ -1,0 +1,25 @@
+{
+      "navLinks": [
+        {
+          "id": "1",
+          "name": "SkinType",
+          "level": 1,
+          "category": {
+            "id": "cat1",
+            "slug": "skintype",
+            "name": "SkinType"
+          }
+        },
+        {
+          "id": "2",
+          "name": "More",
+          "level": 1,
+          "category": {
+            "id": "cat2",
+            "slug": "more",
+            "name": "Update Soon"
+          }
+        }
+      ]
+  }
+  

@@ -1,15 +1,15 @@
 import Link from "next/link";
 import { NavLink } from "./NavLink";
-import navData from "@/../public/navData.json";
+import navLinksDocument from "@/../public/NavLinksDocument.json";
 
 export function NavLinks({ channel }: { channel: string }) {
   // navLinks는 GraphQL의 변수
-  const navLinks = navData;
+  const navLinks = navLinksDocument;
 
   return (
     <>
       <NavLink href="/">All</NavLink>
-      {navLinks.menu?.items?.map((item) => {
+      {navLinks.navLinks?.map((item) => {
         if (item.category) {
           return (
             <NavLink key={item.id} href={`/${item.category.slug}`}>
