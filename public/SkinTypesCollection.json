@@ -10,7 +10,7 @@
           "node": {
             "id": "DRNT",
             "name": "DRNT",
-            "slug": "type-1",
+            "slug": "DRNT",
             "category": {
               "id": "DRNT",
               "name": "DRNT"
@@ -25,7 +25,7 @@
           "node": {
             "id": "ORPW",
             "name": "ORPW",
-            "slug": "type-2",
+            "slug": "ORPW",
             "category": {
               "id": "ORPW",
               "name": "ORPW"
@@ -40,7 +40,7 @@
           "node": {
             "id": "DRPT",
             "name": "DRPT",
-            "slug": "type-3",
+            "slug": "DRPT",
             "category": {
               "id": "DRPT",
               "name": "DRPT"
@@ -55,7 +55,7 @@
           "node": {
             "id": "DSPT",
             "name": "DSPT",
-            "slug": "type-4",
+            "slug": "DSPT",
             "category": {
               "id": "DSPT",
               "name": "DSPT"
@@ -70,7 +70,7 @@
           "node": {
             "id": "DRPW",
             "name": "DRPW",
-            "slug": "type-5",
+            "slug": "DRPW",
             "category": {
               "id": "DRPW",
               "name": "DRPW"

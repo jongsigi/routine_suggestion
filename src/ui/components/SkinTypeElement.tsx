@@ -8,7 +8,7 @@ export function SkinTypeElement({skintype,	loading,
      
   return (
     <li data-testid="ProductElement">
-      <LinkWithChannel href={`/products/${skintype.slug}`} key={skintype.id}>
+      <LinkWithChannel href={`/skintypes/${skintype.slug}`} key={skintype.id}>
         <div className="grid place-items-center">
           {skintype?.thumbnail?.url && (
             <ProductImageWrapper

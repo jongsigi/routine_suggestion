@@ -6,7 +6,7 @@
           "level": 1,
           "category": {
             "id": "cat1",
-            "slug": "skintype",
+            "slug": "",
             "name": "SkinType"
           }
         },
