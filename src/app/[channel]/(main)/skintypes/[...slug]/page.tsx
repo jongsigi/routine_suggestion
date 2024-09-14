@@ -1,12 +1,13 @@
+import {SkinTypeHeader} from "@/ui/components/SkinTypeHeader"
+import SkinTypesCollection from "@public/SkinTypesCollection.json";
+
 export default function Docs({ params }: { params: { slug: string[] } }) {
-  if (params.slug.length === 2) {
-    return (
-      <h2>
-        {params.slug[0]} : {params.slug[1]}
-      </h2>
-    );
-  } else if (params.slug.length === 1) {
-    return <h2>{params.slug[0]}</h2>;
-  }
-  return <h1>Docs Page</h1>;
+  const matchingNode = SkinTypesCollection.collection?.types.edges.find(edge => {
+    // Assuming node has a `slug` property to match against
+    return edge.node.slug === params.slug[0];
+  })?.node; // Access the `node` if a match is found
+
+  return(
+    <SkinTypeHeader matchingType={matchingNode}/>
+  )
 }

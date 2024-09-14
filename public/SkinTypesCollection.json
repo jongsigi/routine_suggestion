@@ -8,11 +8,11 @@
       "edges": [
         {
           "node": {
-            "id": "DRNT",
+            "id": "type-14",
             "name": "DRNT",
             "slug": "DRNT",
             "category": {
-              "id": "DRNT",
+              "id": "type-14",
               "name": "DRNT"
             },
             "thumbnail": {
@@ -23,11 +23,11 @@
         },
         {
           "node": {
-            "id": "ORPW",
+            "id": "type-N",
             "name": "ORPW",
             "slug": "ORPW",
             "category": {
-              "id": "ORPW",
+              "id": "type-N",
               "name": "ORPW"
             },
             "thumbnail": {
@@ -38,11 +38,11 @@
         },
         {
           "node": {
-            "id": "DRPT",
+            "id": "type-N",
             "name": "DRPT",
             "slug": "DRPT",
             "category": {
-              "id": "DRPT",
+              "id": "type-N",
               "name": "DRPT"
             },
             "thumbnail": {
@@ -53,11 +53,11 @@
         },
         {
           "node": {
-            "id": "DSPT",
+            "id": "type-N",
             "name": "DSPT",
             "slug": "DSPT",
             "category": {
-              "id": "DSPT",
+              "id": "type-N",
               "name": "DSPT"
             },
             "thumbnail": {
@@ -68,11 +68,11 @@
         },
         {
           "node": {
-            "id": "DRPW",
+            "id": "type-N",
             "name": "DRPW",
             "slug": "DRPW",
             "category": {
-              "id": "DRPW",
+              "id": "type-N",
               "name": "DRPW"
             },
             "thumbnail": {

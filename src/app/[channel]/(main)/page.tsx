@@ -8,7 +8,6 @@ export const metadata = {
 };
 
 export default function Page({ params }: { params: { channel: string } }) {
-
   if (!SkinTypesCollection.collection?.types) {
     return null;
   }
