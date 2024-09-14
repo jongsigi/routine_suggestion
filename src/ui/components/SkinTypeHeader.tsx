@@ -1,7 +1,7 @@
 import { ExternalLink } from '@/ui/components/external-link'
 import { SkinTypesProps } from '@/types/SkinTypeListDocument';
 
-export function SkinTypeHeader({ matchingType }: { matchingType: SkinTypesProps }) {
+export function SkinTypeHeader({matchingType} : {matchingType :SkinTypesProps}) {
   return (
     <div className="mx-auto max-w-2xl px-4 mt-4">
       <div className="flex flex-col gap-2 rounded-2xl bg-zinc-50 sm:p-8 p-4 text-sm sm:text-base">

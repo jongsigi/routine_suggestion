@@ -5,7 +5,6 @@ import { SkinTypesProps } from '@/types/SkinTypeListDocument';
 
 export function SkinTypeElement({skintype,	loading,
 	priority,}: {skintype:SkinTypesProps} & { loading: "eager" | "lazy"; priority?: boolean }) { 
-     
   return (
     <li data-testid="ProductElement">
       <LinkWithChannel href={`/skintypes/${skintype.slug}`} key={skintype.id}>
