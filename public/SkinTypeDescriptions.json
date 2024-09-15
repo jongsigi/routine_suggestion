@@ -1,0 +1,179 @@
+[   
+    {
+        "id": "type-1",
+        "type": "DSPT",
+        "percentage" : "5.8%",
+        "summary": "~~~",
+        "pros": "피부타입의 장점",
+        "cons": "피부타입의 주의할점",
+        "recommendedIngredients": "추천 성분",
+        "recommendedMorningRoutine": ["클렌징", "토너", "세럼", "수분크림"],
+        "recommendedNightRoutine": ["클렌징", "토너", "세럼", "수분크림"]
+      },
+      {
+        "id": "type-2",
+        "type": "DSNT",
+        "percentage" : "17.3%",
+        "summary": "~~~",
+        "pros": "피부타입의 장점",
+        "cons": "피부타입의 주의할점",
+        "recommendedIngredients": "추천 성분",
+        "recommendedMorningRoutine": ["클렌징", "토너", "세럼", "수분크림"],
+        "recommendedNightRoutine": ["클렌징", "토너", "세럼", "수분크림"]
+      },
+      {
+        "id": "type-3",
+        "type": "DSPW",
+        "percentage" : "4.3%",
+        "summary": "~~~",
+        "pros": "피부타입의 장점",
+        "cons": "피부타입의 주의할점",
+        "recommendedIngredients": "추천 성분",
+        "recommendedMorningRoutine": ["클렌징", "토너", "세럼", "수분크림"],
+        "recommendedNightRoutine": ["클렌징", "토너", "세럼", "수분크림"]
+      },
+      {
+        "id": "type-4",
+        "type": "DSNW",
+        "percentage" : "6.3%",
+        "summary": "~~~",
+        "pros": "피부타입의 장점",
+        "cons": "피부타입의 주의할점",
+        "recommendedIngredients": "추천 성분",
+        "recommendedMorningRoutine": ["클렌징", "토너", "세럼", "수분크림"],
+        "recommendedNightRoutine": ["클렌징", "토너", "세럼", "수분크림"]
+      },
+      {
+        "id": "type-5",
+        "type": "OSPT",
+        "percentage" : "4.1%",
+        "summary": "~~~",
+        "pros": "피부타입의 장점",
+        "cons": "피부타입의 주의할점",
+        "recommendedIngredients": "추천 성분",
+        "recommendedMorningRoutine": ["클렌징", "토너", "세럼", "수분크림"],
+        "recommendedNightRoutine": ["클렌징", "토너", "세럼", "수분크림"]
+      },
+      {
+        "id": "type-6",
+        "type": "OSNT",
+        "percentage" : "18.9%",
+        "summary": "~~~",
+        "pros": "피부타입의 장점",
+        "cons": "피부타입의 주의할점",
+        "recommendedIngredients": "추천 성분",
+        "recommendedMorningRoutine": ["클렌징", "토너", "세럼", "수분크림"],
+        "recommendedNightRoutine": ["클렌징", "토너", "세럼", "수분크림"]
+      },
+      {
+        "id": "type-7",
+        "type": "OSPW",
+        "percentage" : "4.3%",
+        "summary": "~~~",
+        "pros": "피부타입의 장점",
+        "cons": "피부타입의 주의할점",
+        "recommendedIngredients": "추천 성분",
+        "recommendedMorningRoutine": ["클렌징", "토너", "세럼", "수분크림"],
+        "recommendedNightRoutine": ["클렌징", "토너", "세럼", "수분크림"]
+      },
+      {
+        "id": "type-8",
+        "type": "OSNW",
+        "percentage" : "7.8%",
+        "summary": "~~~",
+        "pros": "피부타입의 장점",
+        "cons": "피부타입의 주의할점",
+        "recommendedIngredients": "추천 성분",
+        "recommendedMorningRoutine": ["클렌징", "토너", "세럼", "수분크림"],
+        "recommendedNightRoutine": ["클렌징", "토너", "세럼", "수분크림"]
+      },
+      {
+        "id": "type-9",
+        "type": "ORPT",
+        "percentage" : "0.3%",
+        "summary": "~~~",
+        "pros": "피부타입의 장점",
+        "cons": "피부타입의 주의할점",
+        "recommendedIngredients": "추천 성분",
+        "recommendedMorningRoutine": ["클렌징", "토너", "세럼", "수분크림"],
+        "recommendedNightRoutine": ["클렌징", "토너", "세럼", "수분크림"]
+      },
+      {
+        "id": "type-10",
+        "type": "ORNT",
+        "percentage" : "7.5%",
+        "summary": "~~~",
+        "pros": "피부타입의 장점",
+        "cons": "피부타입의 주의할점",
+        "recommendedIngredients": "추천 성분",
+        "recommendedMorningRoutine": ["클렌징", "토너", "세럼", "수분크림"],
+        "recommendedNightRoutine": ["클렌징", "토너", "세럼", "수분크림"]
+      },
+      {
+        "id": "type-11",
+        "type": "ORPW",
+        "percentage" : "0.3%",
+        "summary": "~~~",
+        "pros": "피부타입의 장점",
+        "cons": "피부타입의 주의할점",
+        "recommendedIngredients": "추천 성분",
+        "recommendedMorningRoutine": ["클렌징", "토너", "세럼", "수분크림"],
+        "recommendedNightRoutine": ["클렌징", "토너", "세럼", "수분크림"]
+      },
+      {
+        "id": "type-12",
+        "type": "ORNW",
+        "percentage" : "3.4%",
+        "summary": "~~~",
+        "pros": "피부타입의 장점",
+        "cons": "피부타입의 주의할점",
+        "recommendedIngredients": "추천 성분",
+        "recommendedMorningRoutine": ["클렌징", "토너", "세럼", "수분크림"],
+        "recommendedNightRoutine": ["클렌징", "토너", "세럼", "수분크림"]
+      },
+    {
+        "id": "type-13",
+        "type": "DRPT",
+        "percentage" : "2.9%",
+        "summary": "~~~",
+        "pros": "피부타입의 장점",
+        "cons": "피부타입의 주의할점",
+        "recommendedIngredients": "추천 성분",
+        "recommendedMorningRoutine": ["클렌징", "토너", "세럼", "수분크림"],
+        "recommendedNightRoutine": ["클렌징", "토너", "세럼", "수분크림"]
+      },
+      {
+        "id": "type-14",
+        "type": "DRNT",
+        "percentage" : "11.3%",
+        "summary": "~~~",
+        "pros": "피부타입의 장점",
+        "cons": "피부타입의 주의할점",
+        "recommendedIngredients": "추천 성분",
+        "recommendedMorningRoutine": ["클렌징", "토너", "세럼", "수분크림"],
+        "recommendedNightRoutine": ["클렌징", "토너", "세럼", "수분크림"]
+      },
+      {
+        "id": "type-15",
+        "type": "DRPW",
+        "percentage" : "1.2%",
+        "summary": "~~~",
+        "pros": "피부타입의 장점",
+        "cons": "피부타입의 주의할점",
+        "recommendedIngredients": "추천 성분",
+        "recommendedMorningRoutine": ["클렌징", "토너", "세럼", "수분크림"],
+        "recommendedNightRoutine": ["클렌징", "토너", "세럼", "수분크림"]
+      },
+      {
+        "id": "type-16",
+        "type": "DSNT",
+        "percentage" : "4.3%",
+        "summary": "~~~",
+        "pros": "피부타입의 장점",
+        "cons": "피부타입의 주의할점",
+        "recommendedIngredients": "추천 성분",
+        "recommendedMorningRoutine": ["클렌징", "토너", "세럼", "수분크림"],
+        "recommendedNightRoutine": ["클렌징", "토너", "세럼", "수분크림"]
+      }
+  ]
+
