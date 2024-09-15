@@ -1,36 +1,93 @@
-import { ExternalLink } from '@/ui/components/external-link'
-import { SkinTypesProps } from '@/types/SkinTypeListDocument';
+import { ExternalLink } from "@/ui/components/external-link";
+import { SkinTypesProps } from "@/types/SkinTypeListDocument";
+import { ProductImageWrapper } from "@/ui/atoms/ProductImageWrapper";
 
-export function SkinTypeHeader({matchingType} : {matchingType :any}) {
+const navItem = [
+  "/img/DRPW.webp",
+  "/img/DRNT.webp",
+  "/img/ORPW.webp",
+  "/img/DSPT.webp",
+];
+
+export function SkinTypeHeader({ matchingType }: { matchingType: any }) {
   return (
     <div className="mx-auto max-w-2xl px-4 mt-4">
       <div className="flex flex-col gap-2 rounded-2xl bg-zinc-50 sm:p-8 p-4 text-sm sm:text-base">
-        <h1 className="text-2xl sm:text-3xl tracking-tight font-semibold max-w-fit inline-block capitalize">
-        {matchingType.id} : {matchingType.slug}
+        <h1 className="text-2xl sm:text-2xl tracking-tight font-bold max-w-fit inline-block capitalize">
+          {matchingType.id} : {matchingType.slug}
         </h1>
+        <p>여기에 피부타입에 대한 간단한 설명</p>
         <p className="leading-normal text-zinc-900">
-          This is an open source AI chatbot app template built with{' '}s
-          <ExternalLink href="https://nextjs.org">Next.js</ExternalLink>, the{' '}
-          <ExternalLink href="https://sdk.vercel.ai">
-            Vercel AI SDK
+          더 자세한 사항은{" "}
+          <ExternalLink
+            href={
+              "https://skintypesolutions.com/blogs/skincare/baumann-skin-" +
+              matchingType.id +
+              "-" +
+              matchingType.slug
+            }
+          >
+            <span className="font-semibold">
+              {" "}
+              {matchingType.slug} 피부타입 설명(English)
+            </span>
           </ExternalLink>
-          , and{' '}
-          <ExternalLink href="https://ai.google.dev">
-            Google Gemini
-          </ExternalLink>
-          .
+          를 통해 확인하실 수 있습니다.
         </p>
-        <p className="leading-normal text-zinc-900">
-          It uses{' '}
-          <ExternalLink href="https://vercel.com/blog/ai-sdk-3-generative-ui">
-            React Server Components
-          </ExternalLink>{' '}
-          with function calling to mix both text with generative UI responses
-          from Gemini. The UI state is synced through the AI SDK so the model is
-          always aware of your stateful interactions as they happen in the
-          browser.
-        </p>
+        <h1 className="text-2xl sm:text-2xl tracking-tight font-bold max-w-fit inline-block capitalize mt-4">
+          {matchingType.slug} 피부타입의 장단점
+        </h1>
+        <p>장점 :</p>
+        <p>단점 :</p>
+        <h1 className="text-2xl sm:text-2xl tracking-tight font-bold max-w-fit inline-block capitalize mt-4">
+          {matchingType.slug}이 쓰면 좋은 성분들
+        </h1>
+        <p>여기에 피부타입 장단점</p>
+      </div>
+      <div className="flex flex-col gap-2 rounded-2xl bg-zinc-50 sm:p-8 p-4 text-sm sm:text-base mt-4">
+        <div className="morning-routine">
+          <h1 className="text-2xl sm:text-2xl tracking-tight font-bold max-w-fit inline-block capitalize mt-4">
+            {matchingType.slug} 추천 모닝루틴
+          </h1>
+          <p>
+            <div className="whitespace-nowrap overflow-x-auto flex">
+              {navItem.map((item, index) => {
+                return (
+                  <ProductImageWrapper
+                    key={index}
+                    src={item}
+                    alt={""}
+                    width={8}
+                    height={8}
+                    sizes={"256px"}
+                  />
+                );
+              })}
+            </div>
+          </p>
+        </div>
+        <div className="night-routine">
+          <h1 className="text-2xl sm:text-2xl tracking-tight font-bold max-w-fit inline-block capitalize mt-4">
+            {matchingType.slug} 추천 나이트루틴
+          </h1>
+          <p>
+            <div className="whitespace-nowrap overflow-x-auto flex">
+              {navItem.map((item, index) => {
+                return (
+                  <ProductImageWrapper
+                    key={index}
+                    src={item}
+                    alt={""}
+                    width={8}
+                    height={8}
+                    sizes={"256px"}
+                  />
+                );
+              })}
+            </div>
+          </p>
+        </div>
       </div>
     </div>
-  )
+  );
 }
