@@ -146,7 +146,7 @@
         "id": "type-14",
         "type": "DRNT",
         "percentage" : "11.3%",
-        "summary": "~~~",
+        "summary": "건성, 저항성, 비색소성, 탄력성",
         "pros": "피부타입의 장점",
         "cons": "피부타입의 주의할점",
         "recommendedIngredients": "추천 성분",
@@ -166,7 +166,7 @@
       },
       {
         "id": "type-16",
-        "type": "DSNT",
+        "type": "DRNW",
         "percentage" : "4.3%",
         "summary": "~~~",
         "pros": "피부타입의 장점",

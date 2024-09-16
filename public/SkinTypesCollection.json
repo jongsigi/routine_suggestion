@@ -8,6 +8,36 @@
       "edges": [
         {
           "node": {
+            "id": "type-12",
+            "name": "ORNW",
+            "slug": "ORNW",
+            "category": {
+              "id": "type-12",
+              "name": "ORNW"
+            },
+            "thumbnail": {
+              "url": "/img/ORNW.webp",
+              "alt": "Type-12 Thumbnail"
+            }
+          }
+        },
+        {
+          "node": {
+            "id": "type-13",
+            "name": "DRPT",
+            "slug": "DRPT",
+            "category": {
+              "id": "type-13",
+              "name": "DRPT"
+            },
+            "thumbnail": {
+              "url": "/img/DRPT.webp",
+              "alt": "Type-13 Thumbnail"
+            }
+          }
+        },
+        {
+          "node": {
             "id": "type-14",
             "name": "DRNT",
             "slug": "DRNT",
@@ -23,61 +53,31 @@
         },
         {
           "node": {
-            "id": "type-N",
-            "name": "ORPW",
-            "slug": "ORPW",
-            "category": {
-              "id": "type-N",
-              "name": "ORPW"
-            },
-            "thumbnail": {
-              "url": "/img/ORPW.webp",
-              "alt": "Product-2 Thumbnail"
-            }
-          }
-        },
-        {
-          "node": {
-            "id": "type-13",
-            "name": "DRPT",
-            "slug": "DRPT",
-            "category": {
-              "id": "type-N",
-              "name": "DRPT"
-            },
-            "thumbnail": {
-              "url": "/img/DRPT.webp",
-              "alt": "Product-3 Thumbnail"
-            }
-          }
-        },
-        {
-          "node": {
-            "id": "type-N",
-            "name": "DSPT",
-            "slug": "DSPT",
-            "category": {
-              "id": "type-N",
-              "name": "DSPT"
-            },
-            "thumbnail": {
-              "url": "/img/DSPT.webp",
-              "alt": "Product-4 Thumbnail"
-            }
-          }
-        },
-        {
-          "node": {
-            "id": "type-N",
+            "id": "type-15",
             "name": "DRPW",
             "slug": "DRPW",
             "category": {
-              "id": "type-N",
+              "id": "type-15",
               "name": "DRPW"
             },
             "thumbnail": {
               "url": "/img/DRPW.webp",
-              "alt": "Product-5 Thumbnail"
+              "alt": "Type-15 Thumbnail"
+            }
+          }
+        }, 
+        {
+          "node": {
+            "id": "type-16",
+            "name": "DRNW",
+            "slug": "DRNW",
+            "category": {
+              "id": "type-16",
+              "name": "DRNW"
+            },
+            "thumbnail": {
+              "url": "/img/DRNW.webp",
+              "alt": "Type-16 Thumbnail"
             }
           }
         }
