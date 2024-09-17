@@ -10,7 +10,7 @@ const navItem = [
   "/img/DSPT.webp",
 ];
 
-export function SkinTypeHeader({ matchingType }: { matchingType: any }) {
+export function SkinTypeDescription({ matchingType }: { matchingType: any }) {
   const SkinTypeDescription = typesDescriptions?.find((typeDescription) => {
     return typeDescription.name === matchingType.slug;
   });
@@ -23,7 +23,7 @@ export function SkinTypeHeader({ matchingType }: { matchingType: any }) {
 
   return (
     <div className="mx-auto max-w-2xl px-4 mt-4">
-      <div className="flex flex-col gap-2 rounded-2xl bg-zinc-50 sm:px-8 px-4 text-sm sm:text-base mt-4">
+      <div className="flex flex-col gap-2 rounded-2xl bg-zinc-50 sm:px-8 px-4 pb-4 text-sm sm:text-base mt-4">
         <h1 className="text-2xl sm:text-2xl tracking-tight font-bold max-w-fit inline-block capitalize mt-4">
           {skintype_id} : {skintype}
         </h1>
@@ -66,7 +66,7 @@ export function SkinTypeHeader({ matchingType }: { matchingType: any }) {
         <p>{SkinTypeDescription?.cons}</p>
         */}
       </div>
-      <div className="flex flex-col gap-2 rounded-2xl bg-zinc-50 sm:px-8 px-4 text-sm sm:text-base mt-4">
+      <div className="flex flex-col gap-2 rounded-2xl bg-zinc-50 sm:px-8 px-4 pb-4 text-sm sm:text-base mt-4">
         <div className="morning-routine">
           <h1 className="text-2xl sm:text-2xl tracking-tight font-bold max-w-fit inline-block capitalize mt-4">
             {matchingType.slug} 추천 모닝루틴

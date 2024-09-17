@@ -1,4 +1,4 @@
-import { SkinTypeHeader } from "@/ui/components/SkinTypeHeader";
+import { SkinTypeDescription } from "@/ui/components/SkinTypeDescription";
 import SkinTypesCollection from "@public/SkinTypesCollection.json";
 
 export default async function Docs({ params }: { params: { slug: string[] } }) {
@@ -8,5 +8,5 @@ export default async function Docs({ params }: { params: { slug: string[] } }) {
       return edge.node.slug === params.slug[0];
     }
   )?.node; // Access the `node` if a match is found
-  return <SkinTypeHeader matchingType={matchingNode} />;
+  return <SkinTypeDescription matchingType={matchingNode} />;
 }

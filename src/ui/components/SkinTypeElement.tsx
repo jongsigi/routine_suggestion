@@ -1,10 +1,15 @@
 import { LinkWithChannel } from "../atoms/LinkWithChannel";
 import { ProductImageWrapper } from "@/ui/atoms/ProductImageWrapper";
-import { SkinTypesProps } from '@/types/SkinTypeListDocument';
+import { SkinTypesProps } from "@/types/SkinTypeListDocument";
 
-
-export function SkinTypeElement({skintype,	loading,
-	priority,}: {skintype:SkinTypesProps} & { loading: "eager" | "lazy"; priority?: boolean }) { 
+export function SkinTypeElement({
+  skintype,
+  loading,
+  priority,
+}: { skintype: SkinTypesProps } & {
+  loading: "eager" | "lazy";
+  priority?: boolean;
+}) {
   return (
     <li data-testid="ProductElement">
       <LinkWithChannel href={`/skintypes/${skintype.slug}`} key={skintype.id}>

@@ -8,6 +8,171 @@
       "edges": [
         {
           "node": {
+            "id": "type-01",
+            "name": "DSPT",
+            "slug": "DSPT",
+            "category": {
+              "id": "type-01",
+              "name": "DSPT"
+            },
+            "thumbnail": {
+              "url": "/img/DSPT.webp",
+              "alt": "Type-01 Thumbnail"
+            }
+          }
+        },
+        {
+          "node": {
+            "id": "type-02",
+            "name": "DSNT",
+            "slug": "DSNT",
+            "category": {
+              "id": "type-02",
+              "name": "DSNT"
+            },
+            "thumbnail": {
+              "url": "/img/DSNT.webp",
+              "alt": "Type-02 Thumbnail"
+            }
+          }
+        },
+        {
+          "node": {
+            "id": "type-03",
+            "name": "DSPW",
+            "slug": "DSPW",
+            "category": {
+              "id": "type-03",
+              "name": "DSPW"
+            },
+            "thumbnail": {
+              "url": "/img/DSPW.webp",
+              "alt": "Type-03 Thumbnail"
+            }
+          }
+        },
+        {
+          "node": {
+            "id": "type-04",
+            "name": "DSNW",
+            "slug": "DSNW",
+            "category": {
+              "id": "type-04",
+              "name": "DSNW"
+            },
+            "thumbnail": {
+              "url": "/img/DSNW.webp",
+              "alt": "Type-04 Thumbnail"
+            }
+          }
+        },
+        {
+          "node": {
+            "id": "type-05",
+            "name": "OSPT",
+            "slug": "OSPT",
+            "category": {
+              "id": "type-05",
+              "name": "OSPT"
+            },
+            "thumbnail": {
+              "url": "/img/OSPT.webp",
+              "alt": "Type-05 Thumbnail"
+            }
+          }
+        },
+        {
+          "node": {
+            "id": "type-06",
+            "name": "OSNT",
+            "slug": "OSNT",
+            "category": {
+              "id": "type-06",
+              "name": "OSNT"
+            },
+            "thumbnail": {
+              "url": "/img/OSNT.webp",
+              "alt": "Type-06 Thumbnail"
+            }
+          }
+        },
+        {
+          "node": {
+            "id": "type-07",
+            "name": "OSPW",
+            "slug": "OSPW",
+            "category": {
+              "id": "type-07",
+              "name": "OSPW"
+            },
+            "thumbnail": {
+              "url": "/img/OSPW.webp",
+              "alt": "Type-07 Thumbnail"
+            }
+          }
+        },
+        {
+          "node": {
+            "id": "type-08",
+            "name": "OSNW",
+            "slug": "OSNW",
+            "category": {
+              "id": "type-08",
+              "name": "OSNW"
+            },
+            "thumbnail": {
+              "url": "/img/OSNW.webp",
+              "alt": "Type-08 Thumbnail"
+            }
+          }
+        },
+        {
+          "node": {
+            "id": "type-09",
+            "name": "ORPT",
+            "slug": "ORPT",
+            "category": {
+              "id": "type-09",
+              "name": "ORPT"
+            },
+            "thumbnail": {
+              "url": "/img/ORPT.webp",
+              "alt": "Type-09 Thumbnail"
+            }
+          }
+        },
+        {
+          "node": {
+            "id": "type-10",
+            "name": "ORNT",
+            "slug": "ORNT",
+            "category": {
+              "id": "type-10",
+              "name": "ORNT"
+            },
+            "thumbnail": {
+              "url": "/img/ORNT.webp",
+              "alt": "Type-10 Thumbnail"
+            }
+          }
+        },
+        {
+          "node": {
+            "id": "type-11",
+            "name": "ORPW",
+            "slug": "ORPW",
+            "category": {
+              "id": "type-11",
+              "name": "ORPW"
+            },
+            "thumbnail": {
+              "url": "/img/ORPW.webp",
+              "alt": "Type-11 Thumbnail"
+            }
+          }
+        },
+        {
+          "node": {
             "id": "type-12",
             "name": "ORNW",
             "slug": "ORNW",
@@ -65,7 +230,7 @@
               "alt": "Type-15 Thumbnail"
             }
           }
-        }, 
+        },
         {
           "node": {
             "id": "type-16",
