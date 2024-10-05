@@ -10,10 +10,15 @@ type Routine = {
 };
 
 type ImageScrollerProps = {
-  routine: Routine;
+  routine?: Routine; // Allow routine to be undefined
 };
 
 const ImageScroller: React.FC<ImageScrollerProps> = ({ routine }) => {
+  // If routine is undefined or empty, display a fallback message
+  if (!routine || Object.keys(routine).length === 0) {
+    return <p>No items to display</p>;
+  }
+
   return (
     <div className="overflow-x-auto" style={{ whiteSpace: 'nowrap', width: '100%', maxWidth: '100vw' }}>
       <div className="flex">
