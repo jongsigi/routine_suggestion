@@ -1,162 +1,962 @@
 ﻿[
   {
-    "id": "type-1",
-    "name": "DSPT",
-    "per": "5.8",
-    "kor_translate": "건성, 민감성, 색소성, 탄력성",
-    "barrier": "수분부족, 염증반응, 색소침착",
-    "recommendedIngredients": "추천 성분",
-    "recommendedMorningRoutine": [ "클렌징", "토너", "세럼", "수분크림" ],
-    "recommendedNightRoutine": [ "클렌징", "토너", "세럼", "수분크림" ]
+      "id": "type-1",
+      "name": "DSPT",
+      "per": "5.8",
+      "kor_translate": "건성, 민감성, 색소성, 탄력성",
+      "barrier": "수분부족, 염증반응, 색소침착",
+      "recommendedIngredients": "추천 성분",
+      "recommendedMorningRoutine": {
+          "cleanser": {
+              "item": "토리든 다이브인 저분자 히알루론산 클렌징 폼 150ml",
+              "link": "https://search.shopping.naver.com/catalog/40165338621?cat_id=50000451",
+              "img": "/img/thumbnail.webp",
+              "price": 15000
+          },
+          "toner": {
+              "item": "넘버즈인 1번 진정 맑게담은 청초토너 300ml ",
+              "link": "https://search.shopping.naver.com/catalog/40165338621?cat_id=50000451",
+              "img": "/img/thumbnail.webp",
+              "price": 26000
+          },
+          "serum": {
+              "item": "앰플엔 세라마이드샷 앰플 30ml",
+              "link": "https://search.shopping.naver.com/catalog/40165338621?cat_id=50000451",
+              "img": "/img/thumbnail.webp",
+              "price": 13900
+          },
+          "moisturizer": {
+              "item": "앰플엔 히알루론샷 수분크림 60ml",
+              "link": "https://search.shopping.naver.com/catalog/40165338621?cat_id=50000451",
+              "img": "/img/thumbnail.webp",
+              "price": 19000
+          }
+      },
+      "recommendedNightRoutine": {
+          "cleanser": {
+              "item": "바이오더마 센시비오 미셀라 클렌징 오일 150ml",
+              "link": "https://search.shopping.naver.com/catalog/40165338621?cat_id=50000451",
+              "img": "/img/thumbnail.webp",
+              "price": 32000
+          },
+          "toner": {
+              "item": "넘버즈인 1번 진정 맑게담은 청초토너 300ml ",
+              "link": "https://search.shopping.naver.com/catalog/40165338621?cat_id=50000451",
+              "img": "/img/thumbnail.webp",
+              "price": 26000
+          },
+          "serum": {
+              "item": "아이소이 블레미쉬 케어업 세럼 35ml",
+              "link": "https://search.shopping.naver.com/catalog/40165338621?cat_id=50000451",
+              "img": "/img/thumbnail.webp",
+              "price": 24000
+          },
+          "moisturizer": {
+              "item": "앰플엔 히알루론샷 수분크림 60ml",
+              "link": "https://search.shopping.naver.com/catalog/40165338621?cat_id=50000451",
+              "img": "/img/thumbnail.webp",
+              "price": 19000
+          }
+      }
   },
   {
-    "id": "type-2",
-    "name": "DSNT",
-    "per": "17.3",
-    "kor_translate": "건성, 민감성, 비색소성, 탄력성",
-    "barrier": "수분부족, 염증반응",
-    "recommendedIngredients": "추천 성분",
-    "recommendedMorningRoutine": [ "클렌징", "토너", "세럼", "수분크림" ],
-    "recommendedNightRoutine": [ "클렌징", "토너", "세럼", "수분크림" ]
+      "id": "type-2",
+      "name": "DSNT",
+      "per": "17.3",
+      "kor_translate": "건성, 민감성, 비색소성, 탄력성",
+      "barrier": "수분부족, 염증반응",
+      "recommendedIngredients": "추천 성분",
+      "recommendedMorningRoutine": {
+          "cleanser": {
+              "item": "토리든 다이브인 저분자 히알루론산 클렌징 폼 150ml",
+              "link": "https://search.shopping.naver.com/catalog/40165338621?cat_id=50000451",
+              "img": "/img/thumbnail.webp",
+              "price": 15000
+          },
+          "toner": {
+              "item": "헤브블루 살몬 케어링 센텔라 토너 200ml",
+              "link": "https://search.shopping.naver.com/catalog/40165338621?cat_id=50000451",
+              "img": "/img/thumbnail.webp",
+              "price": 41900
+          },
+          "serum": {
+              "item": "앰플엔 세라마이드샷 앰플 30ml",
+              "link": "https://search.shopping.naver.com/catalog/40165338621?cat_id=50000451",
+              "img": "/img/thumbnail.webp",
+              "price": 13900
+          },
+          "moisturizer": {
+              "item": "바이오힐보 판테셀 리페어시카 크림 50ml",
+              "link": "https://search.shopping.naver.com/catalog/40165338621?cat_id=50000451",
+              "img": "/img/thumbnail.webp",
+              "price": 18000
+          }
+      },
+      "recommendedNightRoutine": {
+          "cleanser": {
+              "item": "바이오더마 센시비오 미셀라 클렌징 오일 150ml",
+              "link": "https://search.shopping.naver.com/catalog/40165338621?cat_id=50000451",
+              "img": "/img/thumbnail.webp",
+              "price": 32000
+          },
+          "toner": {
+              "item": "헤브블루 살몬 케어링 센텔라 토너 200ml",
+              "link": "https://search.shopping.naver.com/catalog/40165338621?cat_id=50000451",
+              "img": "/img/thumbnail.webp",
+              "price": 41900
+          },
+          "serum": {
+              "item": "아누아 PDRN 히알루론산 캡슐 100 세럼 10ea",
+              "link": "https://search.shopping.naver.com/catalog/40165338621?cat_id=50000451",
+              "img": "/img/thumbnail.webp",
+              "price": 19900
+          },
+          "moisturizer": {
+              "item": "바이오힐보 판테셀 리페어시카 크림 50ml",
+              "link": "https://search.shopping.naver.com/catalog/40165338621?cat_id=50000451",
+              "img": "/img/thumbnail.webp",
+              "price": 18000
+          }
+      }
   },
   {
-    "id": "type-3",
-    "name": "DSPW",
-    "per": "4.3",
-    "kor_translate": "건성, 민감성, 색소성, 주름성",
-    "barrier": "수분부족, 염증반응, 색소침착, 탄력저하",
-    "recommendedIngredients": "추천 성분",
-    "recommendedMorningRoutine": [ "클렌징", "토너", "세럼", "수분크림" ],
-    "recommendedNightRoutine": [ "클렌징", "토너", "세럼", "수분크림" ]
+      "id": "type-3",
+      "name": "DSPW",
+      "per": "4.3",
+      "kor_translate": "건성, 민감성, 색소성, 주름성",
+      "barrier": "수분부족, 염증반응, 색소침착, 탄력저하",
+      "recommendedIngredients": "추천 성분",
+      "recommendedMorningRoutine": {
+          "cleanser": {
+              "item": "토리든 다이브인 저분자 히알루론산 클렌징 폼 150ml",
+              "link": "https://search.shopping.naver.com/catalog/40165338621?cat_id=50000451",
+              "img": "/img/thumbnail.webp",
+              "price": 15000
+          },
+          "toner": {
+              "item": "넘버즈인 1번 진정 맑게담은 청초토너 300ml ",
+              "link": "https://search.shopping.naver.com/catalog/40165338621?cat_id=50000451",
+              "img": "/img/thumbnail.webp",
+              "price": 26000
+          },
+          "serum": {
+              "item": "앰플엔 세라마이드샷 앰플 30ml",
+              "link": "https://search.shopping.naver.com/catalog/40165338621?cat_id=50000451",
+              "img": "/img/thumbnail.webp",
+              "price": 13900
+          },
+          "moisturizer": {
+              "item": "앰플엔 히알루론샷 수분크림 60ml",
+              "link": "https://search.shopping.naver.com/catalog/40165338621?cat_id=50000451",
+              "img": "/img/thumbnail.webp",
+              "price": 19000
+          }
+      },
+      "recommendedNightRoutine": {
+          "cleanser": {
+              "item": "바이오더마 센시비오 미셀라 클렌징 오일 150ml",
+              "link": "https://search.shopping.naver.com/catalog/40165338621?cat_id=50000451",
+              "img": "/img/thumbnail.webp",
+              "price": 32000
+          },
+          "toner": {
+              "item": "넘버즈인 1번 진정 맑게담은 청초토너 300ml ",
+              "link": "https://search.shopping.naver.com/catalog/40165338621?cat_id=50000451",
+              "img": "/img/thumbnail.webp",
+              "price": 26000
+          },
+          "serum": {
+              "item": "아이소이 블레미쉬 케어업 세럼 35ml",
+              "link": "https://search.shopping.naver.com/catalog/40165338621?cat_id=50000451",
+              "img": "/img/thumbnail.webp",
+              "price": 24000
+          },
+          "moisturizer": {
+              "item": "앰플엔 히알루론샷 수분크림 60ml",
+              "link": "https://search.shopping.naver.com/catalog/40165338621?cat_id=50000451",
+              "img": "/img/thumbnail.webp",
+              "price": 19000
+          }
+      }
   },
   {
-    "id": "type-4",
-    "name": "DSNW",
-    "per": "6.3",
-    "kor_translate": "건성, 민감성, 비색소성, 주름성",
-    "barrier": "수분부족, 염증반응, 탄력저하",
-    "recommendedIngredients": "추천 성분",
-    "recommendedMorningRoutine": [ "클렌징", "토너", "세럼", "수분크림" ],
-    "recommendedNightRoutine": [ "클렌징", "토너", "세럼", "수분크림" ]
+      "id": "type-4",
+      "name": "DSNW",
+      "per": "6.3",
+      "kor_translate": "건성, 민감성, 비색소성, 주름성",
+      "barrier": "수분부족, 염증반응, 탄력저하",
+      "recommendedIngredients": "추천 성분",
+      "recommendedMorningRoutine": {
+          "cleanser": {
+              "item": "토리든 다이브인 저분자 히알루론산 클렌징 폼 150ml",
+              "link": "https://search.shopping.naver.com/catalog/40165338621?cat_id=50000451",
+              "img": "/img/thumbnail.webp",
+              "price": 15000
+          },
+          "toner": {
+              "item": "헤브블루 살몬 케어링 센텔라 토너 200ml",
+              "link": "https://search.shopping.naver.com/catalog/40165338621?cat_id=50000451",
+              "img": "/img/thumbnail.webp",
+              "price": 41900
+          },
+          "serum": {
+              "item": "앰플엔 세라마이드샷 앰플 30ml",
+              "link": "https://search.shopping.naver.com/catalog/40165338621?cat_id=50000451",
+              "img": "/img/thumbnail.webp",
+              "price": 13900
+          },
+          "moisturizer": {
+              "item": "바이오힐보 판테셀 리페어시카 크림 50ml",
+              "link": "https://search.shopping.naver.com/catalog/40165338621?cat_id=50000451",
+              "img": "/img/thumbnail.webp",
+              "price": 18000
+          }
+      },
+      "recommendedNightRoutine": {
+          "cleanser": {
+              "item": "바이오더마 센시비오 미셀라 클렌징 오일 150ml",
+              "link": "https://search.shopping.naver.com/catalog/40165338621?cat_id=50000451",
+              "img": "/img/thumbnail.webp",
+              "price": 32000
+          },
+          "toner": {
+              "item": "헤브블루 살몬 케어링 센텔라 토너 200ml",
+              "link": "https://search.shopping.naver.com/catalog/40165338621?cat_id=50000451",
+              "img": "/img/thumbnail.webp",
+              "price": 41900
+          },
+          "serum": {
+              "item": "아누아 PDRN 히알루론산 캡슐 100 세럼 10ea",
+              "link": "https://search.shopping.naver.com/catalog/40165338621?cat_id=50000451",
+              "img": "/img/thumbnail.webp",
+              "price": 19900
+          },
+          "moisturizer": {
+              "item": "바이오힐보 판테셀 리페어시카 크림 50ml",
+              "link": "https://search.shopping.naver.com/catalog/40165338621?cat_id=50000451",
+              "img": "/img/thumbnail.webp",
+              "price": 18000
+          }
+      }
   },
   {
-    "id": "type-5",
-    "name": "OSPT",
-    "per": "4.1",
-    "kor_translate": "지성, 민감성, 색소성, 탄력성",
-    "barrier": "염증반응, 색소침착",
-    "recommendedIngredients": "추천 성분",
-    "recommendedMorningRoutine": [ "클렌징", "토너", "세럼", "수분크림" ],
-    "recommendedNightRoutine": [ "클렌징", "토너", "세럼", "수분크림" ]
+      "id": "type-5",
+      "name": "OSPT",
+      "per": "4.1",
+      "kor_translate": "지성, 민감성, 색소성, 탄력성",
+      "barrier": "염증반응, 색소침착",
+      "recommendedIngredients": "추천 성분",
+      "recommendedMorningRoutine": {
+          "cleanser": {
+              "item": "이즈앤트리 어니언 뉴페어 클렌징폼 150ml",
+              "link": "https://search.shopping.naver.com/catalog/40165338621?cat_id=50000451",
+              "img": "/img/thumbnail.webp",
+              "price": 18000
+          },
+          "toner": {
+              "item": "넘버즈인 1번 진정 맑게담은 청초토너 300ml ",
+              "link": "https://search.shopping.naver.com/catalog/40165338621?cat_id=50000451",
+              "img": "/img/thumbnail.webp",
+              "price": 26000
+          },
+          "serum": {
+              "item": "어바웃미 숲진정 수분 세럼 50ml",
+              "link": "https://search.shopping.naver.com/catalog/40165338621?cat_id=50000451",
+              "img": "/img/thumbnail.webp",
+              "price": 28000
+          },
+          "moisturizer": {
+              "item": "파티온 노스카나인 트러블 크림 40ml",
+              "link": "https://search.shopping.naver.com/catalog/40165338621?cat_id=50000451",
+              "img": "/img/thumbnail.webp",
+              "price": 29000
+          }
+      },
+      "recommendedNightRoutine": {
+          "cleanser": {
+              "item": "에이트루 퓨어 밸런싱 클렌징오일 150g",
+              "link": "https://search.shopping.naver.com/catalog/40165338621?cat_id=50000451",
+              "img": "/img/thumbnail.webp",
+              "price": 23000
+          },
+          "toner": {
+              "item": "넘버즈인 1번 진정 맑게담은 청초토너 300ml ",
+              "link": "https://search.shopping.naver.com/catalog/40165338621?cat_id=50000451",
+              "img": "/img/thumbnail.webp",
+              "price": 26000
+          },
+          "serum": {
+              "item": "아이소이 블레미쉬 케어업 세럼 35ml",
+              "link": "https://search.shopping.naver.com/catalog/40165338621?cat_id=50000451",
+              "img": "/img/thumbnail.webp",
+              "price": 24000
+          },
+          "moisturizer": {
+              "item": "파티온 노스카나인 트러블 크림 40ml",
+              "link": "https://search.shopping.naver.com/catalog/40165338621?cat_id=50000451",
+              "img": "/img/thumbnail.webp",
+              "price": 29000
+          }
+      }
   },
   {
-    "id": "type-6",
-    "name": "OSNT",
-    "per": "18.9",
-    "kor_translate": "지성, 민감성, 비색소성, 탄력성",
-    "barrier": "염증반응",
-    "recommendedIngredients": "추천 성분",
-    "recommendedMorningRoutine": [ "클렌징", "토너", "세럼", "수분크림" ],
-    "recommendedNightRoutine": [ "클렌징", "토너", "세럼", "수분크림" ]
+      "id": "type-6",
+      "name": "OSNT",
+      "per": "18.9",
+      "kor_translate": "지성, 민감성, 비색소성, 탄력성",
+      "barrier": "염증반응",
+      "recommendedIngredients": "추천 성분",
+      "recommendedMorningRoutine": {
+          "cleanser": {
+              "item": "이즈앤트리 어니언 뉴페어 클렌징폼 150ml",
+              "link": "https://search.shopping.naver.com/catalog/40165338621?cat_id=50000451",
+              "img": "/img/thumbnail.webp",
+              "price": 18000
+          },
+          "toner": {
+              "item": "더랩바이블랑두 올리고 히알루론산 딥토너 200ml",
+              "link": "https://search.shopping.naver.com/catalog/40165338621?cat_id=50000451",
+              "img": "/img/thumbnail.webp",
+              "price": 23000
+          },
+          "serum": {
+              "item": "어바웃미 숲진정 수분 세럼 50ml",
+              "link": "https://search.shopping.naver.com/catalog/40165338621?cat_id=50000451",
+              "img": "/img/thumbnail.webp",
+              "price": 28000
+          },
+          "moisturizer": {
+              "item": "토니모리 어성초시카 쿨링 수분크림 100ml ",
+              "link": "https://search.shopping.naver.com/catalog/40165338621?cat_id=50000451",
+              "img": "/img/thumbnail.webp",
+              "price": 15000
+          }
+      },
+      "recommendedNightRoutine": {
+          "cleanser": {
+              "item": "에이트루 퓨어 밸런싱 클렌징오일 150g",
+              "link": "https://search.shopping.naver.com/catalog/40165338621?cat_id=50000451",
+              "img": "/img/thumbnail.webp",
+              "price": 23000
+          },
+          "toner": {
+              "item": "더랩바이블랑두 올리고 히알루론산 딥토너 200ml",
+              "link": "https://search.shopping.naver.com/catalog/40165338621?cat_id=50000451",
+              "img": "/img/thumbnail.webp",
+              "price": 23000
+          },
+          "serum": {
+              "item": "아누아 PDRN 히알루론산 캡슐 100 세럼 10ea",
+              "link": "https://search.shopping.naver.com/catalog/40165338621?cat_id=50000451",
+              "img": "/img/thumbnail.webp",
+              "price": 19900
+          },
+          "moisturizer": {
+              "item": "토니모리 어성초시카 쿨링 수분크림 100ml ",
+              "link": "https://search.shopping.naver.com/catalog/40165338621?cat_id=50000451",
+              "img": "/img/thumbnail.webp",
+              "price": 15000
+          }
+      }
   },
   {
-    "id": "type-7",
-    "name": "OSPW",
-    "per": "4.3",
-    "kor_translate": "지성, 민감성, 색소성, 주름성",
-    "barrier": "염증반응, 색소침착, 탄력저하",
-    "recommendedIngredients": "추천 성분",
-    "recommendedMorningRoutine": [ "클렌징", "토너", "세럼", "수분크림" ],
-    "recommendedNightRoutine": [ "클렌징", "토너", "세럼", "수분크림" ]
+      "id": "type-7",
+      "name": "OSPW",
+      "per": "4.3",
+      "kor_translate": "지성, 민감성, 색소성, 주름성",
+      "barrier": "염증반응, 색소침착, 탄력저하",
+      "recommendedIngredients": "추천 성분",
+      "recommendedMorningRoutine": {
+          "cleanser": {
+              "item": "이즈앤트리 어니언 뉴페어 클렌징폼 150ml",
+              "link": "https://search.shopping.naver.com/catalog/40165338621?cat_id=50000451",
+              "img": "/img/thumbnail.webp",
+              "price": 18000
+          },
+          "toner": {
+              "item": "넘버즈인 1번 진정 맑게담은 청초토너 300ml ",
+              "link": "https://search.shopping.naver.com/catalog/40165338621?cat_id=50000451",
+              "img": "/img/thumbnail.webp",
+              "price": 26000
+          },
+          "serum": {
+              "item": "어바웃미 숲진정 수분 세럼 50ml",
+              "link": "https://search.shopping.naver.com/catalog/40165338621?cat_id=50000451",
+              "img": "/img/thumbnail.webp",
+              "price": 28000
+          },
+          "moisturizer": {
+              "item": "파티온 노스카나인 트러블 크림 40ml",
+              "link": "https://search.shopping.naver.com/catalog/40165338621?cat_id=50000451",
+              "img": "/img/thumbnail.webp",
+              "price": 29000
+          }
+      },
+      "recommendedNightRoutine": {
+          "cleanser": {
+              "item": "에이트루 퓨어 밸런싱 클렌징오일 150g",
+              "link": "https://search.shopping.naver.com/catalog/40165338621?cat_id=50000451",
+              "img": "/img/thumbnail.webp",
+              "price": 23000
+          },
+          "toner": {
+              "item": "넘버즈인 1번 진정 맑게담은 청초토너 300ml ",
+              "link": "https://search.shopping.naver.com/catalog/40165338621?cat_id=50000451",
+              "img": "/img/thumbnail.webp",
+              "price": 26000
+          },
+          "serum": {
+              "item": "아이소이 블레미쉬 케어업 세럼 35ml",
+              "link": "https://search.shopping.naver.com/catalog/40165338621?cat_id=50000451",
+              "img": "/img/thumbnail.webp",
+              "price": 24000
+          },
+          "moisturizer": {
+              "item": "파티온 노스카나인 트러블 크림 40ml",
+              "link": "https://search.shopping.naver.com/catalog/40165338621?cat_id=50000451",
+              "img": "/img/thumbnail.webp",
+              "price": 29000
+          }
+      }
   },
   {
-    "id": "type-8",
-    "name": "OSNW",
-    "per": "7.8",
-    "kor_translate": "지성, 민감성, 비색소성, 주름성",
-    "barrier": "염증반응, 탄력저하",
-    "recommendedIngredients": "추천 성분",
-    "recommendedMorningRoutine": [ "클렌징", "토너", "세럼", "수분크림" ],
-    "recommendedNightRoutine": [ "클렌징", "토너", "세럼", "수분크림" ]
+      "id": "type-8",
+      "name": "OSNW",
+      "per": "7.8",
+      "kor_translate": "지성, 민감성, 비색소성, 주름성",
+      "barrier": "염증반응, 탄력저하",
+      "recommendedIngredients": "추천 성분",
+      "recommendedMorningRoutine": {
+          "cleanser": {
+              "item": "이즈앤트리 어니언 뉴페어 클렌징폼 150ml",
+              "link": "https://search.shopping.naver.com/catalog/40165338621?cat_id=50000451",
+              "img": "/img/thumbnail.webp",
+              "price": 18000
+          },
+          "toner": {
+              "item": "더랩바이블랑두 올리고 히알루론산 딥토너 200ml",
+              "link": "https://search.shopping.naver.com/catalog/40165338621?cat_id=50000451",
+              "img": "/img/thumbnail.webp",
+              "price": 23000
+          },
+          "serum": {
+              "item": "어바웃미 숲진정 수분 세럼 50ml",
+              "link": "https://search.shopping.naver.com/catalog/40165338621?cat_id=50000451",
+              "img": "/img/thumbnail.webp",
+              "price": 28000
+          },
+          "moisturizer": {
+              "item": "토니모리 어성초시카 쿨링 수분크림 100ml ",
+              "link": "https://search.shopping.naver.com/catalog/40165338621?cat_id=50000451",
+              "img": "/img/thumbnail.webp",
+              "price": 15000
+          }
+      },
+      "recommendedNightRoutine": {
+          "cleanser": {
+              "item": "에이트루 퓨어 밸런싱 클렌징오일 150g",
+              "link": "https://search.shopping.naver.com/catalog/40165338621?cat_id=50000451",
+              "img": "/img/thumbnail.webp",
+              "price": 23000
+          },
+          "toner": {
+              "item": "더랩바이블랑두 올리고 히알루론산 딥토너 200ml",
+              "link": "https://search.shopping.naver.com/catalog/40165338621?cat_id=50000451",
+              "img": "/img/thumbnail.webp",
+              "price": 23000
+          },
+          "serum": {
+              "item": "아누아 PDRN 히알루론산 캡슐 100 세럼 10ea",
+              "link": "https://search.shopping.naver.com/catalog/40165338621?cat_id=50000451",
+              "img": "/img/thumbnail.webp",
+              "price": 19900
+          },
+          "moisturizer": {
+              "item": "토니모리 어성초시카 쿨링 수분크림 100ml ",
+              "link": "https://search.shopping.naver.com/catalog/40165338621?cat_id=50000451",
+              "img": "/img/thumbnail.webp",
+              "price": 15000
+          }
+      }
   },
   {
-    "id": "type-9",
-    "name": "ORPT",
-    "per": "0.3",
-    "kor_translate": "지성, 저항성, 색소성, 탄력성",
-    "barrier": "색소침착",
-    "recommendedIngredients": "추천 성분",
-    "recommendedMorningRoutine": [ "클렌징", "토너", "세럼", "수분크림" ],
-    "recommendedNightRoutine": [ "클렌징", "토너", "세럼", "수분크림" ]
+      "id": "type-9",
+      "name": "ORPT",
+      "per": "0.3",
+      "kor_translate": "지성, 저항성, 색소성, 탄력성",
+      "barrier": "색소침착",
+      "recommendedIngredients": "추천 성분",
+      "recommendedMorningRoutine": {
+          "cleanser": {
+              "item": "브링그린 티트리 시카 트러블 클렌징 폼 300ml",
+              "link": "https://search.shopping.naver.com/catalog/40165338621?cat_id=50000451",
+              "img": "/img/thumbnail.webp",
+              "price": 19000
+          },
+          "toner": {
+              "item": "브링그린 티트리시카 수딩토너 500ml",
+              "link": "https://search.shopping.naver.com/catalog/40165338621?cat_id=50000451",
+              "img": "/img/thumbnail.webp",
+              "price": 27000
+          },
+          "serum": {
+              "item": "비플레인 바하 필링 앰플 50ml",
+              "link": "https://search.shopping.naver.com/catalog/40165338621?cat_id=50000451",
+              "img": "/img/thumbnail.webp",
+              "price": 25600
+          },
+          "moisturizer": {
+              "item": "이즈앤트리 어니언 뉴페어 겔크림 50ml",
+              "link": "https://search.shopping.naver.com/catalog/40165338621?cat_id=50000451",
+              "img": "/img/thumbnail.webp",
+              "price": 18000
+          }
+      },
+      "recommendedNightRoutine": {
+          "cleanser": {
+              "item": "땡큐파머 폴루프리™ 블랙헤드 딥 클렌징 오일 200ml",
+              "link": "https://search.shopping.naver.com/catalog/40165338621?cat_id=50000451",
+              "img": "/img/thumbnail.webp",
+              "price": 31000
+          },
+          "toner": {
+              "item": "브링그린 티트리시카 수딩토너 500ml",
+              "link": "https://search.shopping.naver.com/catalog/40165338621?cat_id=50000451",
+              "img": "/img/thumbnail.webp",
+              "price": 27000
+          },
+          "serum": {
+              "item": "코스알엑스 더 나이아신아마이드 15 세럼 20ml",
+              "link": "https://search.shopping.naver.com/catalog/40165338621?cat_id=50000451",
+              "img": "/img/thumbnail.webp",
+              "price": 18400
+          },
+          "moisturizer": {
+              "item": "이즈앤트리 어니언 뉴페어 겔크림 50ml",
+              "link": "https://search.shopping.naver.com/catalog/40165338621?cat_id=50000451",
+              "img": "/img/thumbnail.webp",
+              "price": 18000
+          }
+      }
   },
   {
-    "id": "type-10",
-    "name": "ORNT",
-    "per": "7.5",
-    "kor_translate": "지성, 저항성, 비색소성, 탄력성",
-    "barrier": "없는 좋은 피부타입",
-    "recommendedIngredients": "추천 성분",
-    "recommendedMorningRoutine": [ "클렌징", "토너", "세럼", "수분크림" ],
-    "recommendedNightRoutine": [ "클렌징", "토너", "세럼", "수분크림" ]
+      "id": "type-10",
+      "name": "ORNT",
+      "per": "7.5",
+      "kor_translate": "지성, 저항성, 비색소성, 탄력성",
+      "barrier": "없는 좋은 피부타입",
+      "recommendedIngredients": "추천 성분",
+      "recommendedMorningRoutine": {
+          "cleanser": {
+              "item": "브링그린 티트리 시카 트러블 클렌징 폼 300ml",
+              "link": "https://search.shopping.naver.com/catalog/40165338621?cat_id=50000451",
+              "img": "/img/thumbnail.webp",
+              "price": 19000
+          },
+          "toner": {
+              "item": "어바웃미 쌀 막걸리 스킨 170ml ",
+              "link": "https://search.shopping.naver.com/catalog/40165338621?cat_id=50000451",
+              "img": "/img/thumbnail.webp",
+              "price": 28000
+          },
+          "serum": {
+              "item": "비플레인 바하 필링 앰플 50ml",
+              "link": "https://search.shopping.naver.com/catalog/40165338621?cat_id=50000451",
+              "img": "/img/thumbnail.webp",
+              "price": 25600
+          },
+          "moisturizer": {
+              "item": "어바웃미 숲진정 수분크림 80ml",
+              "link": "https://search.shopping.naver.com/catalog/40165338621?cat_id=50000451",
+              "img": "/img/thumbnail.webp",
+              "price": 19000
+          }
+      },
+      "recommendedNightRoutine": {
+          "cleanser": {
+              "item": "땡큐파머 폴루프리™ 블랙헤드 딥 클렌징 오일 200ml",
+              "link": "https://search.shopping.naver.com/catalog/40165338621?cat_id=50000451",
+              "img": "/img/thumbnail.webp",
+              "price": 31000
+          },
+          "toner": {
+              "item": "어바웃미 쌀 막걸리 스킨 170ml ",
+              "link": "https://search.shopping.naver.com/catalog/40165338621?cat_id=50000451",
+              "img": "/img/thumbnail.webp",
+              "price": 28000
+          },
+          "serum": {
+              "item": "에이지투웨니스 인텐시브 바이탈 에센스 100ml",
+              "link": "https://search.shopping.naver.com/catalog/40165338621?cat_id=50000451",
+              "img": "/img/thumbnail.webp",
+              "price": 39000
+          },
+          "moisturizer": {
+              "item": "어바웃미 숲진정 수분크림 80ml",
+              "link": "https://search.shopping.naver.com/catalog/40165338621?cat_id=50000451",
+              "img": "/img/thumbnail.webp",
+              "price": 19000
+          }
+      }
   },
   {
-    "id": "type-11",
-    "name": "ORPW",
-    "per": "0.3",
-    "kor_translate": "지성, 저항성, 색소성, 주름성",
-    "barrier": "색소침착, 탄력저하",
-    "recommendedIngredients": "추천 성분",
-    "recommendedMorningRoutine": [ "클렌징", "토너", "세럼", "수분크림" ],
-    "recommendedNightRoutine": [ "클렌징", "토너", "세럼", "수분크림" ]
+      "id": "type-11",
+      "name": "ORPW",
+      "per": "0.3",
+      "kor_translate": "지성, 저항성, 색소성, 주름성",
+      "barrier": "색소침착, 탄력저하",
+      "recommendedIngredients": "추천 성분",
+      "recommendedMorningRoutine": {
+          "cleanser": {
+              "item": "브링그린 티트리 시카 트러블 클렌징 폼 300ml",
+              "link": "https://search.shopping.naver.com/catalog/40165338621?cat_id=50000451",
+              "img": "/img/thumbnail.webp",
+              "price": 19000
+          },
+          "toner": {
+              "item": "브링그린 티트리시카 수딩토너 500ml",
+              "link": "https://search.shopping.naver.com/catalog/40165338621?cat_id=50000451",
+              "img": "/img/thumbnail.webp",
+              "price": 27000
+          },
+          "serum": {
+              "item": "비플레인 바하 필링 앰플 50ml",
+              "link": "https://search.shopping.naver.com/catalog/40165338621?cat_id=50000451",
+              "img": "/img/thumbnail.webp",
+              "price": 25600
+          },
+          "moisturizer": {
+              "item": "이즈앤트리 어니언 뉴페어 겔크림 50ml",
+              "link": "https://search.shopping.naver.com/catalog/40165338621?cat_id=50000451",
+              "img": "/img/thumbnail.webp",
+              "price": 18000
+          }
+      },
+      "recommendedNightRoutine": {
+          "cleanser": {
+              "item": "땡큐파머 폴루프리™ 블랙헤드 딥 클렌징 오일 200ml",
+              "link": "https://search.shopping.naver.com/catalog/40165338621?cat_id=50000451",
+              "img": "/img/thumbnail.webp",
+              "price": 31000
+          },
+          "toner": {
+              "item": "브링그린 티트리시카 수딩토너 500ml",
+              "link": "https://search.shopping.naver.com/catalog/40165338621?cat_id=50000451",
+              "img": "/img/thumbnail.webp",
+              "price": 27000
+          },
+          "serum": {
+              "item": "코스알엑스 더 나이아신아마이드 15 세럼 20ml",
+              "link": "https://search.shopping.naver.com/catalog/40165338621?cat_id=50000451",
+              "img": "/img/thumbnail.webp",
+              "price": 18400
+          },
+          "moisturizer": {
+              "item": "이즈앤트리 어니언 뉴페어 겔크림 50ml",
+              "link": "https://search.shopping.naver.com/catalog/40165338621?cat_id=50000451",
+              "img": "/img/thumbnail.webp",
+              "price": 18000
+          }
+      }
   },
   {
-    "id": "type-12",
-    "name": "ORNW",
-    "per": "3.4",
-    "kor_translate": "지성, 저항성, 비색소성, 주름성",
-    "barrier": "탄력저하",
-    "recommendedIngredients": "추천 성분",
-    "recommendedMorningRoutine": [ "클렌징", "토너", "세럼", "수분크림" ],
-    "recommendedNightRoutine": [ "클렌징", "토너", "세럼", "수분크림" ]
+      "id": "type-12",
+      "name": "ORNW",
+      "per": "3.4",
+      "kor_translate": "지성, 저항성, 비색소성, 주름성",
+      "barrier": "탄력저하",
+      "recommendedIngredients": "추천 성분",
+      "recommendedMorningRoutine": {
+          "cleanser": {
+              "item": "브링그린 티트리 시카 트러블 클렌징 폼 300ml",
+              "link": "https://search.shopping.naver.com/catalog/40165338621?cat_id=50000451",
+              "img": "/img/thumbnail.webp",
+              "price": 19000
+          },
+          "toner": {
+              "item": "어바웃미 쌀 막걸리 스킨 170ml ",
+              "link": "https://search.shopping.naver.com/catalog/40165338621?cat_id=50000451",
+              "img": "/img/thumbnail.webp",
+              "price": 28000
+          },
+          "serum": {
+              "item": "비플레인 바하 필링 앰플 50ml",
+              "link": "https://search.shopping.naver.com/catalog/40165338621?cat_id=50000451",
+              "img": "/img/thumbnail.webp",
+              "price": 25600
+          },
+          "moisturizer": {
+              "item": "어바웃미 숲진정 수분크림 80ml",
+              "link": "https://search.shopping.naver.com/catalog/40165338621?cat_id=50000451",
+              "img": "/img/thumbnail.webp",
+              "price": 19000
+          }
+      },
+      "recommendedNightRoutine": {
+          "cleanser": {
+              "item": "땡큐파머 폴루프리™ 블랙헤드 딥 클렌징 오일 200ml",
+              "link": "https://search.shopping.naver.com/catalog/40165338621?cat_id=50000451",
+              "img": "/img/thumbnail.webp",
+              "price": 31000
+          },
+          "toner": {
+              "item": "어바웃미 쌀 막걸리 스킨 170ml ",
+              "link": "https://search.shopping.naver.com/catalog/40165338621?cat_id=50000451",
+              "img": "/img/thumbnail.webp",
+              "price": 28000
+          },
+          "serum": {
+              "item": "에이지투웨니스 인텐시브 바이탈 에센스 100ml",
+              "link": "https://search.shopping.naver.com/catalog/40165338621?cat_id=50000451",
+              "img": "/img/thumbnail.webp",
+              "price": 39000
+          },
+          "moisturizer": {
+              "item": "어바웃미 숲진정 수분크림 80ml",
+              "link": "https://search.shopping.naver.com/catalog/40165338621?cat_id=50000451",
+              "img": "/img/thumbnail.webp",
+              "price": 19000
+          }
+      }
   },
   {
-    "id": "type-13",
-    "name": "DRPT",
-    "per": "2.9",
-    "kor_translate": "건성, 저항성, 색소성, 탄력성",
-    "barrier": "수분부족, 색소침착",
-    "recommendedIngredients": "추천 성분",
-    "recommendedMorningRoutine": [ "클렌징", "토너", "세럼", "수분크림" ],
-    "recommendedNightRoutine": [ "클렌징", "토너", "세럼", "수분크림" ]
+      "id": "type-13",
+      "name": "DRPT",
+      "per": "2.9",
+      "kor_translate": "건성, 저항성, 색소성, 탄력성",
+      "barrier": "수분부족, 색소침착",
+      "recommendedIngredients": "추천 성분",
+      "recommendedMorningRoutine": {
+          "cleanser": {
+              "item": "일리윤 세라마이드 더마6.0 클렌징워터 폼 250ml",
+              "link": "https://search.shopping.naver.com/catalog/40165338621?cat_id=50000451",
+              "img": "/img/thumbnail.webp",
+              "price": 21000
+          },
+          "toner": {
+              "item": "마녀공장 판테토인 에센스 토너 200ml ",
+              "link": "https://search.shopping.naver.com/catalog/40165338621?cat_id=50000451",
+              "img": "/img/thumbnail.webp",
+              "price": 32000
+          },
+          "serum": {
+              "item": "셀리맥스 노니 에너지 샘플 30ml",
+              "link": "https://search.shopping.naver.com/catalog/40165338621?cat_id=50000451",
+              "img": "/img/thumbnail.webp",
+              "price": 18000
+          },
+          "moisturizer": {
+              "item": "넘버즈인 2번 시카마이드 장벽 딥페어 크림 60ml",
+              "link": "https://search.shopping.naver.com/catalog/40165338621?cat_id=50000451",
+              "img": "/img/thumbnail.webp",
+              "price": 22500
+          }
+      },
+      "recommendedNightRoutine": {
+          "cleanser": {
+              "item": "마녀공장 퓨어클렌징 오일 200ml",
+              "link": "https://search.shopping.naver.com/catalog/40165338621?cat_id=50000451",
+              "img": "/img/thumbnail.webp",
+              "price": 29000
+          },
+          "toner": {
+              "item": "마녀공장 판테토인 에센스 토너 200ml ",
+              "link": "https://search.shopping.naver.com/catalog/40165338621?cat_id=50000451",
+              "img": "/img/thumbnail.webp",
+              "price": 32000
+          },
+          "serum": {
+              "item": "코스알엑스 더 나이아신아마이드 15 세럼 20ml",
+              "link": "https://search.shopping.naver.com/catalog/40165338621?cat_id=50000451",
+              "img": "/img/thumbnail.webp",
+              "price": 18400
+          },
+          "moisturizer": {
+              "item": "넘버즈인 2번 시카마이드 장벽 딥페어 크림 60ml",
+              "link": "https://search.shopping.naver.com/catalog/40165338621?cat_id=50000451",
+              "img": "/img/thumbnail.webp",
+              "price": 22500
+          }
+      }
   },
   {
-    "id": "type-14",
-    "name": "DRNT",
-    "per": "11.3",
-    "kor_translate": "건성, 저항성, 비색소성, 탄력성",
-    "barrier": "수분부족",
-    "recommendedIngredients": "추천 성분",
-    "recommendedMorningRoutine": [ "클렌징", "토너", "세럼", "수분크림" ],
-    "recommendedNightRoutine": [ "클렌징", "토너", "세럼", "수분크림" ]
+      "id": "type-14",
+      "name": "DRNT",
+      "per": "11.3",
+      "kor_translate": "건성, 저항성, 비색소성, 탄력성",
+      "barrier": "수분부족",
+      "recommendedIngredients": "추천 성분",
+      "recommendedMorningRoutine": {
+          "cleanser": {
+              "item": "일리윤 세라마이드 더마6.0 클렌징워터 폼 250ml",
+              "link": "https://search.shopping.naver.com/catalog/40165338621?cat_id=50000451",
+              "img": "/img/thumbnail.webp",
+              "price": 21000
+          },
+          "toner": {
+              "item": "어바웃미 쌀 막걸리 스킨 170ml ",
+              "link": "https://search.shopping.naver.com/catalog/40165338621?cat_id=50000451",
+              "img": "/img/thumbnail.webp",
+              "price": 28000
+          },
+          "serum": {
+              "item": "라운드랩 독도앰플 45g",
+              "link": "https://search.shopping.naver.com/catalog/40165338621?cat_id=50000451",
+              "img": "/img/thumbnail.webp",
+              "price": 19000
+          },
+          "moisturizer": {
+              "item": "이니스프리 그린티 씨드 히알루론산 크림 50ml",
+              "link": "https://search.shopping.naver.com/catalog/40165338621?cat_id=50000451",
+              "img": "/img/thumbnail.webp",
+              "price": 20000
+          }
+      },
+      "recommendedNightRoutine": {
+          "cleanser": {
+              "item": "마녀공장 퓨어클렌징 오일 200ml",
+              "link": "https://search.shopping.naver.com/catalog/40165338621?cat_id=50000451",
+              "img": "/img/thumbnail.webp",
+              "price": 29000
+          },
+          "toner": {
+              "item": "어바웃미 쌀 막걸리 스킨 170ml ",
+              "link": "https://search.shopping.naver.com/catalog/40165338621?cat_id=50000451",
+              "img": "/img/thumbnail.webp",
+              "price": 28000
+          },
+          "serum": {
+              "item": "에이지투웨니스 인텐시브 바이탈 에센스 100ml",
+              "link": "https://search.shopping.naver.com/catalog/40165338621?cat_id=50000451",
+              "img": "/img/thumbnail.webp",
+              "price": 39000
+          },
+          "moisturizer": {
+              "item": "이니스프리 그린티 씨드 히알루론산 크림 50ml",
+              "link": "https://search.shopping.naver.com/catalog/40165338621?cat_id=50000451",
+              "img": "/img/thumbnail.webp",
+              "price": 20000
+          }
+      }
   },
   {
-    "id": "type-15",
-    "name": "DRPW",
-    "per": "1.2",
-    "kor_translate": "건성, 저항성, 색소성, 주름성",
-    "barrier": "수분부족, 색소침착, 탄력저하",
-    "recommendedIngredients": "추천 성분",
-    "recommendedMorningRoutine": [ "클렌징", "토너", "세럼", "수분크림" ],
-    "recommendedNightRoutine": [ "클렌징", "토너", "세럼", "수분크림" ]
+      "id": "type-15",
+      "name": "DRPW",
+      "per": "1.2",
+      "kor_translate": "건성, 저항성, 색소성, 주름성",
+      "barrier": "수분부족, 색소침착, 탄력저하",
+      "recommendedIngredients": "추천 성분",
+      "recommendedMorningRoutine": {
+          "cleanser": {
+              "item": "일리윤 세라마이드 더마6.0 클렌징워터 폼 250ml",
+              "link": "https://search.shopping.naver.com/catalog/40165338621?cat_id=50000451",
+              "img": "/img/thumbnail.webp",
+              "price": 21000
+          },
+          "toner": {
+              "item": "마녀공장 판테토인 에센스 토너 200ml ",
+              "link": "https://search.shopping.naver.com/catalog/40165338621?cat_id=50000451",
+              "img": "/img/thumbnail.webp",
+              "price": 32000
+          },
+          "serum": {
+              "item": "셀리맥스 노니 에너지 샘플 30ml",
+              "link": "https://search.shopping.naver.com/catalog/40165338621?cat_id=50000451",
+              "img": "/img/thumbnail.webp",
+              "price": 18000
+          },
+          "moisturizer": {
+              "item": "넘버즈인 2번 시카마이드 장벽 딥페어 크림 60ml",
+              "link": "https://search.shopping.naver.com/catalog/40165338621?cat_id=50000451",
+              "img": "/img/thumbnail.webp",
+              "price": 22500
+          }
+      },
+      "recommendedNightRoutine": {
+          "cleanser": {
+              "item": "마녀공장 퓨어클렌징 오일 200ml",
+              "link": "https://search.shopping.naver.com/catalog/40165338621?cat_id=50000451",
+              "img": "/img/thumbnail.webp",
+              "price": 29000
+          },
+          "toner": {
+              "item": "마녀공장 판테토인 에센스 토너 200ml ",
+              "link": "https://search.shopping.naver.com/catalog/40165338621?cat_id=50000451",
+              "img": "/img/thumbnail.webp",
+              "price": 32000
+          },
+          "serum": {
+              "item": "코스알엑스 더 나이아신아마이드 15 세럼 20ml",
+              "link": "https://search.shopping.naver.com/catalog/40165338621?cat_id=50000451",
+              "img": "/img/thumbnail.webp",
+              "price": 18400
+          },
+          "moisturizer": {
+              "item": "넘버즈인 2번 시카마이드 장벽 딥페어 크림 60ml",
+              "link": "https://search.shopping.naver.com/catalog/40165338621?cat_id=50000451",
+              "img": "/img/thumbnail.webp",
+              "price": 22500
+          }
+      }
   },
   {
-    "id": "type-16",
-    "name": "DRNW",
-    "per": "4.3",
-    "kor_translate": "건성, 저항성, 비색소성, 주름성",
-    "barrier": "수분부족, 탄력저하",
-    "recommendedIngredients": "추천 성분",
-    "recommendedMorningRoutine": [ "클렌징", "토너", "세럼", "수분크림" ],
-    "recommendedNightRoutine": [ "클렌징", "토너", "세럼", "수분크림" ]
+      "id": "type-16",
+      "name": "DRNW",
+      "per": "4.3",
+      "kor_translate": "건성, 저항성, 비색소성, 주름성",
+      "barrier": "수분부족, 탄력저하",
+      "recommendedIngredients": "추천 성분",
+      "recommendedMorningRoutine": {
+          "cleanser": {
+              "item": "일리윤 세라마이드 더마6.0 클렌징워터 폼 250ml",
+              "link": "https://search.shopping.naver.com/catalog/40165338621?cat_id=50000451",
+              "img": "/img/thumbnail.webp",
+              "price": 21000
+          },
+          "toner": {
+              "item": "어바웃미 쌀 막걸리 스킨 170ml ",
+              "link": "https://search.shopping.naver.com/catalog/40165338621?cat_id=50000451",
+              "img": "/img/thumbnail.webp",
+              "price": 28000
+          },
+          "serum": {
+              "item": "라운드랩 독도앰플 45g",
+              "link": "https://search.shopping.naver.com/catalog/40165338621?cat_id=50000451",
+              "img": "/img/thumbnail.webp",
+              "price": 19000
+          },
+          "moisturizer": {
+              "item": "이니스프리 그린티 씨드 히알루론산 크림 50ml",
+              "link": "https://search.shopping.naver.com/catalog/40165338621?cat_id=50000451",
+              "img": "/img/thumbnail.webp",
+              "price": 20000
+          }
+      },
+      "recommendedNightRoutine": {
+          "cleanser": {
+              "item": "마녀공장 퓨어클렌징 오일 200ml",
+              "link": "https://search.shopping.naver.com/catalog/40165338621?cat_id=50000451",
+              "img": "/img/thumbnail.webp",
+              "price": 29000
+          },
+          "toner": {
+              "item": "어바웃미 쌀 막걸리 스킨 170ml ",
+              "link": "https://search.shopping.naver.com/catalog/40165338621?cat_id=50000451",
+              "img": "/img/thumbnail.webp",
+              "price": 28000
+          },
+          "serum": {
+              "item": "에이지투웨니스 인텐시브 바이탈 에센스 100ml",
+              "link": "https://search.shopping.naver.com/catalog/40165338621?cat_id=50000451",
+              "img": "/img/thumbnail.webp",
+              "price": 39000
+          },
+          "moisturizer": {
+              "item": "이니스프리 그린티 씨드 히알루론산 크림 50ml",
+              "link": "https://search.shopping.naver.com/catalog/40165338621?cat_id=50000451",
+              "img": "/img/thumbnail.webp",
+              "price": 20000
+          }
+      }
   }
 ]

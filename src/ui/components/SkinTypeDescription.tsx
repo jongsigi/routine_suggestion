@@ -1,14 +1,8 @@
 import { ExternalLink } from "@/ui/components/external-link";
 // import { SkinTypesProps } from "@/types/SkinTypeListDocument";
 import { ProductImageWrapper } from "@/ui/atoms/ProductImageWrapper";
+import ImageScroller  from "@/ui/atoms/ImageScroller";
 import typesDescriptions from "@public/SkinTypeDescriptions.json";
-
-const navItem = [
-  "/img/DRPW.webp",
-  "/img/DRNT.webp",
-  "/img/ORPW.webp",
-  "/img/DSPT.webp",
-];
 
 export function SkinTypeDescription({ matchingType }: { matchingType: any }) {
   const SkinTypeDescription = typesDescriptions?.find((typeDescription) => {
@@ -20,6 +14,8 @@ export function SkinTypeDescription({ matchingType }: { matchingType: any }) {
   const skintype_id = SkinTypeDescription?.id;
   const kor_translate = SkinTypeDescription?.kor_translate;
   const skin_barrier = SkinTypeDescription?.barrier;
+  const morning_routine = SkinTypeDescription?.recommendedMorningRoutine;
+  const night_routine = SkinTypeDescription?.recommendedNightRoutine;
 
   return (
     <div className="mx-auto max-w-2xl px-4 mt-4">
@@ -72,39 +68,13 @@ export function SkinTypeDescription({ matchingType }: { matchingType: any }) {
             {matchingType.slug} 추천 모닝루틴
           </h1>
 
-          <div className="whitespace-nowrap overflow-x-auto flex">
-            {navItem.map((item, index) => {
-              return (
-                <ProductImageWrapper
-                  key={index}
-                  src={item}
-                  alt={""}
-                  width={8}
-                  height={8}
-                  sizes={"256px"}
-                />
-              );
-            })}
-          </div>
+          <ImageScroller routine={morning_routine} />
         </div>
         <div className="night-routine">
           <h1 className="text-2xl sm:text-2xl tracking-tight font-bold max-w-fit inline-block capitalize mt-4">
             {matchingType.slug} 추천 나이트루틴
           </h1>
-          <div className="whitespace-nowrap overflow-x-auto flex">
-            {navItem.map((item, index) => {
-              return (
-                <ProductImageWrapper
-                  key={index}
-                  src={item}
-                  alt={""}
-                  width={8}
-                  height={8}
-                  sizes={"256px"}
-                />
-              );
-            })}
-          </div>
+          <ImageScroller routine={night_routine} />
           <div>
             <img className="size-1/2" src="/img/footer.png" alt="footer" />
           </div>
