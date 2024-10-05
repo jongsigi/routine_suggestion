@@ -8,7 +8,7 @@ export function NavLinks({ channel }: { channel: string }) {
 
   return (
     <>
-      <NavLink href="/">All</NavLink>
+      {/* <NavLink href="/">All</NavLink> */}
       {navLinks.navLinks?.map((item) => {
         if (item.category) {
           return (
