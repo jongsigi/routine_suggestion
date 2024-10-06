@@ -20,7 +20,7 @@ export const Nav = ({ channel }: { channel: string }) => {
 			</div>
 			<Suspense>
 				<MobileMenu>
-					<SearchBar channel={channel} />
+					{/* <SearchBar channel={channel} /> */}
 					<NavLinks channel={channel} />
 				</MobileMenu>
 			</Suspense>
