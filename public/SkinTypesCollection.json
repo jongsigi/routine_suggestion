@@ -16,7 +16,7 @@
               "name": "DSPT"
             },
             "thumbnail": {
-              "url": "/img/DSPT.webp",
+              "url": "/img/skinType/DSPT.webp",
               "alt": "Type-01 Thumbnail"
             }
           }
@@ -31,7 +31,7 @@
               "name": "DSNT"
             },
             "thumbnail": {
-              "url": "/img/DSNT.webp",
+              "url": "/img/skinType/DSNT.webp",
               "alt": "Type-02 Thumbnail"
             }
           }
@@ -46,7 +46,7 @@
               "name": "DSPW"
             },
             "thumbnail": {
-              "url": "/img/DSPW.webp",
+              "url": "/img/skinType/DSPW.webp",
               "alt": "Type-03 Thumbnail"
             }
           }
@@ -61,7 +61,7 @@
               "name": "DSNW"
             },
             "thumbnail": {
-              "url": "/img/DSNW.webp",
+              "url": "/img/skinType/DSNW.webp",
               "alt": "Type-04 Thumbnail"
             }
           }
@@ -76,7 +76,7 @@
               "name": "OSPT"
             },
             "thumbnail": {
-              "url": "/img/OSPT.webp",
+              "url": "/img/skinType/OSPT.webp",
               "alt": "Type-05 Thumbnail"
             }
           }
@@ -91,7 +91,7 @@
               "name": "OSNT"
             },
             "thumbnail": {
-              "url": "/img/OSNT.webp",
+              "url": "/img/skinType/OSNT.webp",
               "alt": "Type-06 Thumbnail"
             }
           }
@@ -106,7 +106,7 @@
               "name": "OSPW"
             },
             "thumbnail": {
-              "url": "/img/OSPW.webp",
+              "url": "/img/skinType/OSPW.webp",
               "alt": "Type-07 Thumbnail"
             }
           }
@@ -121,7 +121,7 @@
               "name": "OSNW"
             },
             "thumbnail": {
-              "url": "/img/OSNW.webp",
+              "url": "/img/skinType/OSNW.webp",
               "alt": "Type-08 Thumbnail"
             }
           }
@@ -136,7 +136,7 @@
               "name": "ORPT"
             },
             "thumbnail": {
-              "url": "/img/ORPT.webp",
+              "url": "/img/skinType/ORPT.webp",
               "alt": "Type-09 Thumbnail"
             }
           }
@@ -151,7 +151,7 @@
               "name": "ORNT"
             },
             "thumbnail": {
-              "url": "/img/ORNT.webp",
+              "url": "/img/skinType/ORNT.webp",
               "alt": "Type-10 Thumbnail"
             }
           }
@@ -166,7 +166,7 @@
               "name": "ORPW"
             },
             "thumbnail": {
-              "url": "/img/ORPW.webp",
+              "url": "/img/skinType/ORPW.webp",
               "alt": "Type-11 Thumbnail"
             }
           }
@@ -181,7 +181,7 @@
               "name": "ORNW"
             },
             "thumbnail": {
-              "url": "/img/ORNW.webp",
+              "url": "/img/skinType/ORNW.webp",
               "alt": "Type-12 Thumbnail"
             }
           }
@@ -196,7 +196,7 @@
               "name": "DRPT"
             },
             "thumbnail": {
-              "url": "/img/DRPT.webp",
+              "url": "/img/skinType/DRPT.webp",
               "alt": "Type-13 Thumbnail"
             }
           }
@@ -211,7 +211,7 @@
               "name": "DRNT"
             },
             "thumbnail": {
-              "url": "/img/DRNT.webp",
+              "url": "/img/skinType/DRNT.webp",
               "alt": "Product-1 Thumbnail"
             }
           }
@@ -226,7 +226,7 @@
               "name": "DRPW"
             },
             "thumbnail": {
-              "url": "/img/DRPW.webp",
+              "url": "/img/skinType/DRPW.webp",
               "alt": "Type-15 Thumbnail"
             }
           }
@@ -241,7 +241,7 @@
               "name": "DRNW"
             },
             "thumbnail": {
-              "url": "/img/DRNW.webp",
+              "url": "/img/skinType/DRNW.webp",
               "alt": "Type-16 Thumbnail"
             }
           }
