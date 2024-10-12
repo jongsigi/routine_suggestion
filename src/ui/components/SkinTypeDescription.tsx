@@ -1,7 +1,7 @@
 import { ExternalLink } from "@/ui/components/external-link";
 // import { SkinTypesProps } from "@/types/SkinTypeListDocument";
 import { ProductImageWrapper } from "@/ui/atoms/ProductImageWrapper";
-import ImageScroller  from "@/ui/atoms/ImageScroller";
+import ImageScroller from "@/ui/atoms/ImageScroller";
 import typesDescriptions from "@public/SkinTypeDescriptions.json";
 
 export function SkinTypeDescription({ matchingType }: { matchingType: any }) {
@@ -65,14 +65,13 @@ export function SkinTypeDescription({ matchingType }: { matchingType: any }) {
       <div className="flex flex-col gap-2 rounded-2xl bg-zinc-50 sm:px-8 px-4 pb-4 text-sm sm:text-base mt-4">
         <div className="morning-routine">
           <h1 className="text-2xl sm:text-2xl tracking-tight font-bold max-w-fit inline-block capitalize mt-4">
-            {matchingType.slug} 추천 모닝루틴
+            {matchingType.slug} 추천 모닝루틴&#127774;
           </h1>
-
           <ImageScroller routine={morning_routine} />
         </div>
         <div className="night-routine">
           <h1 className="text-2xl sm:text-2xl tracking-tight font-bold max-w-fit inline-block capitalize mt-4">
-            {matchingType.slug} 추천 나이트루틴
+            {matchingType.slug} 추천 나이트루틴&#127771;
           </h1>
           <ImageScroller routine={night_routine} />
           <div>

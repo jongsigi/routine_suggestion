@@ -1,4 +1,5 @@
 import React from 'react';
+import Link from 'next/link';
 
 type Routine = {
   [key: string]: {
@@ -25,12 +26,14 @@ const ImageScroller: React.FC<ImageScrollerProps> = ({ routine }) => {
         {Object.values(routine).map((item, index) => (
           <div key={index} className="inline-block mx-2" style={{ width: '256px', height: '256px' }}>
             <div className="relative bg-neutral-50 overflow-hidden" style={{ width: '256px', height: '256px' }}>
+              <Link href={item.link}>
               <img
                 src={item.img}
                 alt={item.item}
                 style={{ maxWidth: '256px', maxHeight: '256px' }}
                 className="object-contain object-center p-2"
               />
+              </Link>
             </div>
           </div>
         ))}
