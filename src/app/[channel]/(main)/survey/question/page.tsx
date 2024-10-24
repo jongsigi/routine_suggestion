@@ -5,7 +5,7 @@ import { supabase } from "@/lib/supabase"; // Ensure the import path is correct
 import { useRouter } from "next/navigation"; // Ensure you're importing useRouter
 import "@/lib/question.css"; // Ensure this file contains the necessary CSS
 
-export function SurveyQuestion() {
+const SurveyQuestion = () => {
   const [questions, setQuestions] = useState<any[]>([]); // Store all questions
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
@@ -44,13 +44,6 @@ export function SurveyQuestion() {
     });
   };
 
-  // Define an interface for the answer data
-  interface AnswerData {
-    user_key: string | null; // Adjust based on your user key type
-    [key: string]: any; // Allow dynamic keys
-  }
-
-  // Inside your handleSubmit function
   const handleSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault();
 
@@ -62,7 +55,7 @@ export function SurveyQuestion() {
       const userKey = localStorage.getItem("user_key"); // Retrieve the user_key from localStorage
 
       // Construct the object to insert
-      const answerData: AnswerData = { user_key: userKey }; // Use the defined type
+      const answerData = { user_key: userKey }; // Use the defined type
       answers.forEach((answer, index) => {
         answerData[`answer_${index}`] = answer; // Add answers to the object dynamically
       });
@@ -151,6 +144,6 @@ export function SurveyQuestion() {
       </form>
     </div>
   );
-}
+};
 
 export default SurveyQuestion;
