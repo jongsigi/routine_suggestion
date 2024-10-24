@@ -46,34 +46,32 @@ const SurveyQuestion = () => {
 
   const handleSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault();
-
+  
     if (currentQuestion < questions.length - 1) {
-      // Move to the next question
       setCurrentQuestion((prev) => prev + 1);
     } else {
-      // All questions answered; handle the final submission
       const userKey = localStorage.getItem("user_key"); // Retrieve the user_key from localStorage
-
-      // Construct the object to insert
-      const answerData = { user_key: userKey }; // Use the defined type
+  
+      // Using type assertion here
+      const answerData: { user_key: string | null; [key: string]: any } = { user_key: userKey };
       answers.forEach((answer, index) => {
-        answerData[`answer_${index}`] = answer; // Add answers to the object dynamically
+        answerData[`answer_${index}`] = answer; // This should now work correctly
       });
-
+  
       const { error: submitError } = await supabase
-        .from("user_answer") // Ensure this matches the actual table name in Supabase
+        .from("user_answer")
         .insert([answerData]);
-
+  
       if (submitError) {
         console.error("Error submitting answers:", submitError);
         setError("Failed to submit answers.");
       } else {
         console.log("Answers submitted successfully!");
-        // Redirect to the results page with user_key as a query parameter
         router.push(`/main/survey/results/${userKey}`);
       }
     }
   };
+  
 
   // Loading and error states
   if (loading) {
