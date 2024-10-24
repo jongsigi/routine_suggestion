@@ -6,6 +6,11 @@ import { supabase } from "@/lib/supabase"; // Adjust the import path based on yo
 import { v4 as uuidv4 } from "uuid"; // Import UUID
 import "@/lib/user_info.css"; // Adjust the path based on your actual CSS file location
 
+declare module 'uuid' {
+  export function v4(): string;
+}
+
+
 const UserInfoPage = () => {
   const router = useRouter(); // Define router for navigation
 
