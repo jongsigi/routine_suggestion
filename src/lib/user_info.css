@@ -1,0 +1,120 @@
+@font-face {
+    font-family: 'GmarketSansMedium';
+    src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansMedium.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+  }
+ 
+  
+  .title {
+    text-align: center;
+    margin: 0 auto;
+    background: #fff;
+    font-size: 18px;
+    padding: 12px 15px;
+    border-radius: 26px;
+    border: 1px solid #d4d3e8;
+    display: block;
+    width: 100%;
+    color: #000;
+    box-shadow: 0px 2px 2px #5c5696;
+    font-weight: 700;
+    margin-bottom: 10px;
+  }
+  
+  .user-info-form {
+    margin: 0 auto;
+    /* width: 320px;
+    padding-bottom: 30px;
+    padding-right: 30px;
+    padding-left: 30px; */
+  }
+  
+  .user-info__field {
+    padding: 20px 0px;
+    position: relative;
+  }
+  
+  .user-info__label {
+    margin-right: 10px;
+    width: fit-content;
+    color: #000;
+    font-weight: 700;
+    margin-bottom: 5px;
+  }
+  
+  /* .user-info__input {
+    border: none;
+    border-bottom: 2px solid #d1d1d4;
+    background: none;
+    padding: 10px;
+    padding-left: 24px;
+    font-weight: 700;
+    transition: 0.2s;
+  } */
+  
+  .user-info__input {
+    appearance: none; /* Remove default styling */
+    background-color: white; /* Change background color */
+    border: 1px solid #ccc; /* Add a border */
+    border-radius: 4px; /* Rounded corners */
+    padding: 10px 30px 10px 10px; /* Left, Right space for arrow */
+    cursor: pointer; /* Change cursor to pointer */
+    transition: border-color 0.3s; /* Transition for border color */
+  }
+  
+  .user-info__input:hover {
+    border-color: #007bff; /* Change border color on hover */
+  }
+  
+  .user-info__input:focus {
+    outline: none; /* Remove outline */
+    border-color: #007bff; /* Highlight border on focus */
+  }
+  .user-info__input--age {
+    /* width: calc(50% - 5px);  */ /* Adjust the width to make both dropdowns fit in one line */
+    margin-right: 10px;
+  }
+  
+  .user-info__age-group {
+    display: inline-block;
+    justify-content: space-between;
+  }
+  
+  .user-info__submit {
+    margin: 0 auto;
+    background: #fff;
+    font-size: 16px;
+    margin-top: 30px;
+    padding: 8px 10px;
+    border-radius: 26px;
+    border: 1px solid #d4d3e8;
+    text-transform: uppercase;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    width: 48%;
+    color: #4c489d;
+    box-shadow: 0px 2px 2px #5c5696;
+    cursor: pointer;
+    transition: 0.2s;
+  }
+  
+  .user-info__submit:active,
+  .user-info__submit:focus,
+  .user-info__submit:hover {
+    border-color: #6a679e;
+    outline: none;
+  }
+  
+  .button__icon {
+    font-size: 24px;
+    margin-left: auto;
+    color: #7875b5;
+  }
+  
+  .button__text {
+    margin: 0 auto;
+    margin-right: 0px;
+  }
+  

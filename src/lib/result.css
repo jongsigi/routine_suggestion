@@ -1,0 +1,201 @@
+.title {
+    text-align: center;
+    margin: 0 auto;
+    background: #fff;
+    font-size: 18px;
+    padding: 12px 15px;
+    border-radius: 26px;
+    border: 1px solid #d4d3e8;
+    display: block;
+    width: 100%;
+    color: #000;
+    box-shadow: 0px 2px 2px #5c5696;
+    font-weight: 700;
+    margin-bottom: 10px;
+  }
+  .survey-complete {
+    text-align: center;
+  }
+  
+  .survey-message {
+    font-size: 18px;
+    color: #000;
+    margin-bottom: 20px;
+  }
+  
+  .survey-result {
+    font-size: 16px;
+    color: #707070;
+    margin-bottom: 15px;
+  }
+  
+  .baumann-type {
+    font-weight: bold;
+    color: #000; /* Accent color to highlight the type */
+  }
+  
+  .survey-button {
+    margin-top: 5px;
+    background: #fff;
+    font-size: 14px;
+    padding: 16px 20px;
+    border-radius: 26px;
+    border: 1px solid #d4d3e8;
+    text-transform: uppercase;
+    font-weight: 700;
+    color: #4c489d;
+    box-shadow: 0px 2px 2px #5c5696;
+    cursor: pointer;
+    transition: 0.2s;
+  }
+  
+  .survey-button:hover {
+    border-color: #6a679e;
+    outline: none;
+  }
+  
+  .button_box {
+    text-align: center;
+  }
+  
+  .skills_bar {
+    margin: 0 auto;
+    width: 80%;
+    background: #fff;
+    padding: 0.5rem 2rem 0.5rem 2rem;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+  }
+  
+  .skills_bar .bar {
+    margin: 1.1rem 0;
+  }
+  
+  .skills_bar .bar:first-child {
+    margin-top: 0px;
+  }
+  
+  .skills_bar .bar .info {
+    margin-bottom: 5px;
+  }
+  
+  .skills_bar .bar .span {
+    font-size: 1.1rem;
+    font-weight: 500;
+  }
+  
+  .progress_line {
+    height: 12px;
+    width: 100%;
+    background: #f0f0f0;
+    border-radius: 10px;
+    position: relative;
+    transform: scaleX(0);
+    animation: animate 1s cubic-bezier(1, 0, 0.5, 1) forwards;
+    transform-origin: left;
+    box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.05), 0px 1px rgba(255, 255, 255, 0.8);
+  }
+  
+  @keyframes animate {
+    100% {
+      transform: scaleY(1);
+    }
+  }
+  
+  .progress_line span {
+    height: 100%;
+    background: #8834db;
+    position: absolute;
+    border-radius: 10px;
+    transform: scaleX(0);
+    animation: animate 1s 1s cubic-bezier(1, 0, 0.5, 1) forwards;
+  }
+  
+  /* .bar .progress_line span::before{
+    position: absolute;
+    content: "";
+    height: 0;
+    width: 0;
+    border: 7px solid transparent;
+    border-bottom-width: 0;
+    border-right-width: 0;
+    border-top-color: #000;
+    right: 0;
+    top: -10px;
+  } */
+  
+  .bar .progress_line .left_percent::after {
+    display: flex; /* Use flexbox for centering */
+    align-items: center; /* Center vertically */
+    justify-content: center; /* Center horizontally */
+    width: 30px;
+    font-size: 10px;
+    position: absolute;
+    left: 74px;
+    top: -20px;
+    background: #000;
+    color: #fff;
+    padding: 2px 10px 2px 6px;
+    border-radius: 3px;
+  }
+  
+  .bar .progress_line .right_percent::after {
+    display: flex; /* Use flexbox for centering */
+    align-items: center; /* Center vertically */
+    justify-content: center; /* Center horizontally */
+    width: 30px;
+    font-size: 10px;
+    position: absolute;
+    right: 74px;
+    top: -20px;
+    background: #000;
+    color: #fff;
+    padding: 2px 10px 2px 6px;
+    border-radius: 3px;
+  }
+  
+  .progress_line.percent span::after {
+    content: attr(data-percent) "%";
+  }
+  
+  .left_percent_value {
+    position: relative;
+    left: 0px;
+  }
+  
+  .right_percent_value {
+    position: relative;
+    margin-left: auto;
+  }
+  
+  .percent_value_box {
+    display: flex;
+  }
+  
+  .link-icon-box{
+    display: flex;
+    justify-content: center;
+    position: relative;
+    margin-top: 10px;
+  }
+  
+  .link-icon { 
+    width: 45px;
+    height: 45px;
+    border:none;
+    background-color:transparent;
+    margin-right: 10px;
+  }
+  
+  .link-icon:hover {
+    /* border-color: orange; */
+    color: white;
+    /* border-radius: 60%;
+    box-shadow: 0 0.5em 0.5em -0.4em yellow; */
+    transform: translateY(-3px);
+  }
+  
+  
+  .link-icon.twitter { background-image: url(/img/social/icon-twitter.png); background-repeat: no-repeat; }
+  .link-icon.facebook { background-image: url(/img/social/icon-facebook.png); background-repeat: no-repeat; } 
+  .link-icon.kakao { background-image: url(/img/social/icon-kakao.png); background-repeat: no-repeat; }

@@ -2,22 +2,22 @@
       "navLinks": [
         {
           "id": "1",
-          "name": "SkinType",
+          "name": "피부TI TEST",
           "level": 1,
           "category": {
             "id": "cat1",
-            "slug": "",
-            "name": "SkinType"
+            "slug": "survey",
+            "name": "피부TI TEST"
           }
         },
         {
           "id": "2",
-          "name": "More",
+          "name": "SkinType",
           "level": 1,
           "category": {
             "id": "cat2",
-            "slug": "more",
-            "name": "Update Soon"
+            "slug": "",
+            "name": "SkinType"
           }
         }
       ]
