@@ -27,7 +27,7 @@ const ResultsPage: React.FC = () => {
 
   // Kakao initialization code
   useEffect(() => {
-    const kakaoJavascriptKey = process.env.KAKAO_JAVASCRIPT_KEY || ''; // Replace with your actual Kakao JavaScript key
+    const kakaoJavascriptKey = process.env.NEXT_PUBLIC_KAKAO_JAVASCRIPT_KEY; // Note the NEXT_PUBLIC_ prefix
     const script = document.createElement("script");
     script.src = "https://developers.kakao.com/sdk/js/kakao.js";
     script.async = true;
@@ -235,6 +235,21 @@ const fn_sendFB = (sns: string) => {
       break;
     case "kakaotalk":
       // Create Kakao link share logic here
+      if (window.Kakao && window.Kakao.isInitialized()) {
+        window.Kakao.Link.createDefaultButton({
+          container: "#btnKakao",
+          objectType: "feed",
+          content: {
+            title: snsTitle,
+            description: snsTitle,
+            imageUrl: thisUrl, // Set a custom image URL if needed
+            link: {
+              mobileWebUrl: thisUrl,
+              webUrl: thisUrl,
+            },
+          },
+        });
+      }
       break;
     default:
       break;
