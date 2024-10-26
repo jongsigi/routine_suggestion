@@ -46,7 +46,7 @@ const UserInfoPage = () => {
   return (
     <div>
       <div className="title-form">
-        <div className="title">피부 MBTI 스무고개 테스트</div>
+        <div className="title">피부TI 스무고개 테스트</div>
       </div>
       <form onSubmit={handleSubmit} className="user-info-form">
         <div className="user-info__field">

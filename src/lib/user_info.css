@@ -9,9 +9,9 @@
   .title {
     text-align: center;
     margin: 0 auto;
+    padding-top: 4px;
     background: #fff;
     font-size: 18px;
-    padding: 12px 15px;
     border-radius: 26px;
     border: 1px solid #d4d3e8;
     display: block;

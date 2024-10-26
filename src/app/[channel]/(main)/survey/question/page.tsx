@@ -1,24 +1,23 @@
 "use client";
 
 import React, { useState, useEffect } from "react";
-import { supabase } from "@/lib/supabase"; // Ensure the import path is correct
-import { useRouter } from "next/navigation"; // Ensure you're importing useRouter
-import "@/lib/question.css"; // Ensure this file contains the necessary CSS
+import { supabase } from "@/lib/supabase";
+import { useRouter } from "next/navigation";
+import "@/lib/question.css";
 
 const SurveyQuestion = () => {
-  const [questions, setQuestions] = useState<any[]>([]); // Store all questions
+  const [questions, setQuestions] = useState<any[]>([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
   const [currentQuestion, setCurrentQuestion] = useState<number>(0);
-  const [answers, setAnswers] = useState<number[]>(new Array(20).fill(null)); // Initialize answers array
-  const router = useRouter(); // Initialize router for navigation
+  const [answers, setAnswers] = useState<number[]>(Array(20).fill(null));
+  const router = useRouter();
 
-  // Fetch all questions from Supabase on component mount
   useEffect(() => {
     const fetchQuestions = async () => {
       setLoading(true);
       const { data, error: fetchError } = await supabase
-        .from("question_and_answer") // Ensure this matches your actual table name
+        .from("question_and_answer")
         .select("*");
 
       if (fetchError) {
@@ -39,29 +38,28 @@ const SurveyQuestion = () => {
     const selectedAnswer = parseInt(event.target.value);
     setAnswers((prevAnswers) => {
       const updatedAnswers = [...prevAnswers];
-      updatedAnswers[currentQuestion] = selectedAnswer; // Store answer at the current question index
+      updatedAnswers[currentQuestion] = selectedAnswer;
       return updatedAnswers;
     });
   };
 
   const handleSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault();
-  
+
+    // Navigate to the next question if not the last one
     if (currentQuestion < questions.length - 1) {
       setCurrentQuestion((prev) => prev + 1);
     } else {
-      const userKey = localStorage.getItem("user_key"); // Retrieve the user_key from localStorage
-  
-      // Using type assertion here
-      const answerData: { user_key: string | null; [key: string]: any } = { user_key: userKey };
+      // Final submission to Supabase
+      const userKey = localStorage.getItem("user_key") || ""; // Provide a fallback if user_key is null
+
+      const answerData: { user_key: string; [key: string]: any } = { user_key: userKey };
       answers.forEach((answer, index) => {
-        answerData[`answer_${index}`] = answer; // This should now work correctly
+        answerData[`answer_${index}`] = answer;
       });
-  
-      const { error: submitError } = await supabase
-        .from("user_answer")
-        .insert([answerData]);
-  
+
+      const { error: submitError } = await supabase.from("user_answer").insert([answerData]);
+
       if (submitError) {
         console.error("Error submitting answers:", submitError);
         setError("Failed to submit answers.");
@@ -71,20 +69,10 @@ const SurveyQuestion = () => {
       }
     }
   };
-  
 
-  // Loading and error states
-  if (loading) {
-    return <div>Loading...</div>;
-  }
-
-  if (error) {
-    return <div>{error}</div>; // Show an error message if there's an issue
-  }
-
-  if (currentQuestion >= questions.length) {
-    return <div>No more questions available.</div>; // Handle case where no more questions are available
-  }
+  if (loading) return <div>Loading...</div>;
+  if (error) return <div>{error}</div>;
+  if (currentQuestion >= questions.length) return <div>No more questions available.</div>;
 
   const currentQuestionData = questions[currentQuestion];
   const answersArray = [
@@ -92,7 +80,7 @@ const SurveyQuestion = () => {
     currentQuestionData.answer_1,
     currentQuestionData.answer_2,
     currentQuestionData.answer_3,
-  ].filter(Boolean); // Ensure answers are filtered for any undefined values
+  ].filter(Boolean);
 
   return (
     <div>
@@ -112,11 +100,12 @@ const SurveyQuestion = () => {
                 type="radio"
                 id={`answer_${index}`}
                 name="answer"
-                value={index} // Assuming you want to send the index
+                value={index}
                 aria-labelledby={`answer_label_${index}`}
                 className="question-form__input"
                 required
                 onChange={handleAnswerChange}
+                checked={answers[currentQuestion] === index}
               />
               <label
                 id={`answer_label_${index}`}
@@ -133,9 +122,7 @@ const SurveyQuestion = () => {
 
         <button type="submit" className="button question-form__submit">
           <span className="button__text">
-            {currentQuestion < questions.length - 1
-              ? ">  다음"
-              : "결과 확인하기"}
+            {currentQuestion < questions.length - 1 ? ">  다음" : "결과 확인하기"}
           </span>
           <i className="button__icon fas fa-chevron-right"></i>
         </button>
