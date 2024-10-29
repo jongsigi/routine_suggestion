@@ -1,8 +1,20 @@
-// Saleor Directory 구조를 따오다보니 생긴 파일
-// 기존에는 Channel에 대한 verify 이후 channel에 대한 Value 전달
-
 import { type ReactNode } from "react";
+import Script from "next/script";
+
+export const metadata = {
+  title: "SiGi SkinCare",
+  description: "SiGi SkinCare",
+};
 
 export default function ChannelLayout({ children }: { children: ReactNode }) {
-	return children;
+  return (
+    <>
+      {children}
+      <Script
+        async
+        src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1977720073946887"
+        crossOrigin="anonymous"
+      />
+    </>
+  );
 }
