@@ -5,6 +5,9 @@ import { SkinTypeList } from "@/ui/components/SkinTypeList";
 export const metadata = {
   title: "SiGi SkinCare",
   description: "SiGi SkinCare",
+  other: {
+		"google-adsense-account": "ca-pub-1977720073946887", // Replace 'aaa' with your actual account ID
+	},
 };
 
 export default function Page({ params }: { params: { channel: string } }) {

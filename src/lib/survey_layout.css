@@ -10,27 +10,24 @@
   }
   
   .container {
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
     min-height: 100vh;
-  }
-  
-  @media (min-width: 800px) { /* Adjust this value based on your breakpoint */
-    .screen {
-      margin-top: -100px; /* Move the screen up on larger screens */
-      /* Or use padding, or transform as needed */
-    }
-  }
+}
 
-  .screen {
-    background: linear-gradient(90deg, #5d54a4, #7c78b8);
-    position: relative;
-    height: 600px;
-    width: 360px;
-    box-shadow: 0px 0px 24px #5c5696;
-  }
-  
+.screen {
+  position: absolute; /* Allows for positioning within .container */
+  top: 50%; /* Move down 50% within .container */
+  left: 50%; /* Move right 50% within .container */
+  transform: translate(-50%, -50%); /* Center by its own width and height */
+  background: linear-gradient(90deg, #5d54a4, #7c78b8);
+  /* margin-top: 30px; Optional: adjust this if you still want an offset */
+  height: 600px;
+  width: 360px;
+  box-shadow: 0px 0px 24px #5c5696;
+}
   .screen__content {
     z-index: 1;
     position: relative;
