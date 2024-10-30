@@ -19,6 +19,16 @@
             "slug": "",
             "name": "SkinType"
           }
+        },
+        {
+          "id": "3",
+          "name": "contact",
+          "level": 1,
+          "category": {
+            "id": "cat3",
+            "slug": "contact",
+            "name": "Contact"
+          }
         }
       ]
   }

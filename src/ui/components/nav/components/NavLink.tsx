@@ -2,7 +2,7 @@
 
 import clsx from "clsx";
 import { usePathname } from "next/navigation";
-import { LinkWithChannel } from "@/ui/atoms/LinkWithChannel";
+import Link from "next/link";
 
 export function NavLink({ href, children }: { href: string; children: JSX.Element | string }) {
 	const pathname = usePathname();
@@ -11,7 +11,7 @@ export function NavLink({ href, children }: { href: string; children: JSX.Elemen
 
 	return (
 		<li className="inline-flex">
-			<LinkWithChannel
+			<Link
 				href={href}
 				className={clsx(
 					isActive ? "border-neutral-900 text-neutral-900" : "border-transparent text-neutral-500",
@@ -19,7 +19,7 @@ export function NavLink({ href, children }: { href: string; children: JSX.Elemen
 				)}
 			>
 				{children}
-			</LinkWithChannel>
+			</Link>
 		</li>
 	);
 }

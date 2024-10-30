@@ -2,7 +2,7 @@ import Link from "next/link";
 import { NavLink } from "./NavLink";
 import navLinksDocument from "@/../public/NavLinksDocument.json";
 
-export function NavLinks({ channel }: { channel: string }) {
+export function NavLinks() {
   // navLinks는 GraphQL의 변수
   const navLinks = navLinksDocument;
 
