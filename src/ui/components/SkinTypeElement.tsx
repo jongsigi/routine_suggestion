@@ -1,4 +1,5 @@
-import { LinkWithChannel } from "../atoms/LinkWithChannel";
+
+import Link from "next/link";
 import { ProductImageWrapper } from "@/ui/atoms/ProductImageWrapper";
 import { SkinTypesProps } from "@/types/SkinTypeListDocument";
 
@@ -12,7 +13,7 @@ export function SkinTypeElement({
 }) {
   return (
     <li data-testid="ProductElement">
-      <LinkWithChannel href={`/skintypes/${skintype.slug}`} key={skintype.id}>
+      <Link href={`/skintypes/${skintype.slug}`} key={skintype.id}>
         <div className="grid place-items-center">
           {skintype?.thumbnail?.url && (
             <ProductImageWrapper
@@ -31,7 +32,7 @@ export function SkinTypeElement({
             </div>
           </div>
         </div>
-      </LinkWithChannel>
+      </Link>
     </li>
   );
 }
