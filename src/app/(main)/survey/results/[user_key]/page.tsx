@@ -54,7 +54,7 @@ const ResultsPage: React.FC = () => {
     localStorage.clear();
     
     // Navigate to the user info page
-    router.push("/main/survey/user_info");
+    router.push("/survey/user_info");
   }
 
   const { user_key } = useParams();
