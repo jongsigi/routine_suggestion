@@ -46,7 +46,7 @@ const ResultsPage: React.FC = () => {
   }, []);
 
   const handleSuggestionButtonClick = () => {
-    router.push(`/main/skintypes/${baumannType}`);
+    router.push(`/skintypes/${baumannType}`);
   };
 
   const handleRetryButtonClick = () => {
