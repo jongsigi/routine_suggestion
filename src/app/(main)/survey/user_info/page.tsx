@@ -40,7 +40,7 @@ const UserInfoPage = () => {
     localStorage.setItem("age_group", ageGroup);
 
     // After saving, redirect to the survey/question page
-    router.push("/main/survey/question");
+    router.push("/survey/question");
   };
 
   return (
