@@ -65,7 +65,7 @@ const SurveyQuestion = () => {
         setError("Failed to submit answers.");
       } else {
         console.log("Answers submitted successfully!");
-        router.push(`/main/survey/results/${userKey}`);
+        router.push(`/survey/results/${userKey}`);
       }
     }
   };
