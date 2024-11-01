@@ -8,6 +8,8 @@ import { processUserAnswer } from "@/lib/processUserAnswer";
 import "@/lib/result.css"; // Ensure this file contains the necessary CSS
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faRotateRight } from "@fortawesome/free-solid-svg-icons";
+import { Fragment } from "react";
+import Head from "next/head"; // Import Head for meta tags
 
 interface UserData {
   user_key: string;
@@ -24,10 +26,19 @@ const baumannCategories = [
 // ResultsPage Component
 const ResultsPage: React.FC = () => {
   const router = useRouter();
+  const { user_key } = useParams();
+
+  const [userData, setUserData] = useState<UserData | null>(null);
+  const [processedResults, setProcessedResults] = useState<number[] | null>(
+    null
+  );
+  const [baumannType, setBaumannType] = useState<string | null>(null);
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState<string | null>(null);
 
   // Kakao initialization code
   useEffect(() => {
-    const kakaoJavascriptKey = process.env.NEXT_PUBLIC_KAKAO_JAVASCRIPT_KEY; // Note the NEXT_PUBLIC_ prefix
+    const kakaoJavascriptKey = process.env.NEXT_PUBLIC_KAKAO_JAVASCRIPT_KEY;
     const script = document.createElement("script");
     script.src = "https://developers.kakao.com/sdk/js/kakao.js";
     script.async = true;
@@ -39,32 +50,10 @@ const ResultsPage: React.FC = () => {
     };
 
     document.head.appendChild(script);
-
     return () => {
       document.head.removeChild(script);
     };
   }, []);
-
-  const handleSuggestionButtonClick = () => {
-    router.push(`/skintypes/${baumannType}`);
-  };
-
-  const handleRetryButtonClick = () => {
-    // Clear local storage
-    localStorage.clear();
-    
-    // Navigate to the user info page
-    router.push("/survey/user_info");
-  }
-
-  const { user_key } = useParams();
-  const [userData, setUserData] = useState<UserData | null>(null);
-  const [processedResults, setProcessedResults] = useState<number[] | null>(
-    null
-  );
-  const [baumannType, setBaumannType] = useState<string | null>(null); // State for baumannType
-  const [loading, setLoading] = useState(true);
-  const [error, setError] = useState<string | null>(null);
 
   useEffect(() => {
     const fetchUserData = async () => {
@@ -80,15 +69,13 @@ const ResultsPage: React.FC = () => {
         setError("Failed to fetch user data.");
       } else {
         setUserData(data?.[0] || null);
-
         if (data && data.length > 0) {
-          // Call the processUserAnswer function to get the processed results and baumannType
           try {
             const { processedData, baumannType } = await processUserAnswer(
               data[0]
-            ); // Correctly destructured
+            );
             setProcessedResults(processedData);
-            setBaumannType(baumannType); // Update state with baumannType
+            setBaumannType(baumannType);
           } catch (err) {
             console.error("Error processing user data:", err);
             setError("Failed to process user data.");
@@ -109,110 +96,131 @@ const ResultsPage: React.FC = () => {
     return <div>{error}</div>;
   }
 
+  const thisUrl = document.URL;
+  const snsTitle = "나의 피부 타입은?";
+  const snsDescription = "피부TI 테스트 하러가기";
+  const imageUrl = `https://sigiskincare.vercel.app/_next/image?url=%2Fimg%2FskinType%2F${baumannType}.webp&w=384&q=75`;
+
+  const handleSuggestionButtonClick = () => {
+    router.push(`/skintypes/${baumannType}`);
+  };
+
+  const handleRetryButtonClick = () => {
+    localStorage.clear();
+    router.push("/survey/user_info");
+  };
+
+  const handleShare = (sns: string) => {
+    fn_sendFB(sns, baumannType);
+  };
+
   return (
-    <div className="survey-complete">
-      <div className="title">
-        <h1 className="survey-title">피부TI 테스트 결과</h1>
-      </div>
+    <Fragment>
+      <Head>
+        <meta property="og:title" content={snsTitle} />
+        <meta property="og:description" content={snsDescription} />
+        <meta property="og:image" content={imageUrl} />{" "}
+        {/* Dynamic image URL */}
+        <meta property="og:url" content={thisUrl} />
+        <meta property="og:type" content="website" />
+        <meta property="test" content="test" />
+      </Head>
+      <div className="survey-complete">
+        <div className="title">
+          <h1 className="survey-title">피부TI 테스트 결과</h1>
+        </div>
 
-      {baumannType && (
-        <p className="survey-result">
-          당신의 피부타입은 <span className="baumann-type">{baumannType}</span>
-        </p>
-      )}
-      <div className="skills_bar">
-        {processedResults ? (
-          processedResults.map((percent, index) => (
-            <div className="percent_box" key={index}>
-              <div className="bar">
-                <div className="percent_value_box">
-                  <span className="left_percent_value">
-                    {baumannCategories[index][0]}
-                  </span>
-                  <span className="right_percent_value">
-                    {baumannCategories[index][1]}
-                  </span>
-                </div>
-                {percent > 50 ? (
-                  <div className="progress_line percent">
-                    <span
-                      className="left_percent"
-                      style={{
-                        width: `${percent}%`,
-                        transformOrigin: "left",
-                        left: 0,
-                      }}
-                      data-percent={percent}
-                    ></span>
-                  </div>
-                ) : (
-                  <div className="progress_line percent">
-                    <span
-                      className="right_percent"
-                      style={{
-                        width: `${100 - percent}%`,
-                        transformOrigin: "right",
-                        right: 0,
-                      }}
-                      data-percent={100 - percent}
-                    ></span>
-                  </div>
-                )}
-              </div>
-            </div>
-          ))
-        ) : (
-          <div>No processed results available.</div>
+        {baumannType && (
+          <p className="survey-result">
+            당신의 피부타입은{" "}
+            <span className="baumann-type">{baumannType}</span>
+          </p>
         )}
-      </div>
 
-      <div className="link-icon-box">
-        <input
-          type="button"
-          id="btnKakao"
-          className="link-icon kakao"
-          onClick={() => fn_sendFB("kakaotalk")}
-        />
-        <input
-          type="button"
-          id="btnTwitter"
-          className="link-icon twitter"
-          onClick={() => fn_sendFB("twitter")}
-        />
-        <input
-          type="button"
-          id="btnFacebook"
-          className="link-icon facebook"
-          onClick={() => fn_sendFB("facebook")}
-        />
-      </div>
-      <div className="button_box">
-        <button
-          style={{ color: "#8834db" }}
-          className="button survey-button"
-          type="button"
-          onClick={handleSuggestionButtonClick}
-        >
-          {baumannType}의 추천 스킨케어 루틴
-        </button>
-      </div>
+        <div className="skills_bar">
+          {processedResults ? (
+            processedResults.map((percent, index) => (
+              <div className="percent_box" key={index}>
+                <div className="bar">
+                  <div className="percent_value_box">
+                    <span className="left_percent_value">
+                      {baumannCategories[index][0]}
+                    </span>
+                    <span className="right_percent_value">
+                      {baumannCategories[index][1]}
+                    </span>
+                  </div>
+                  <div className="progress_line percent">
+                    <span
+                      className={
+                        percent > 50 ? "left_percent" : "right_percent"
+                      }
+                      style={{
+                        width: `${percent > 50 ? percent : 100 - percent}%`,
+                        transformOrigin: percent > 50 ? "left" : "right",
+                        [percent > 50 ? "left" : "right"]: 0,
+                      }}
+                      data-percent={percent > 50 ? percent : 100 - percent}
+                    ></span>
+                  </div>
+                </div>
+              </div>
+            ))
+          ) : (
+            <div>No processed results available.</div>
+          )}
+        </div>
 
-      <div className="button_box">
-        <button
-          className="button survey-button"
-          type="button"
-          onClick={handleRetryButtonClick}
-        >
-          <FontAwesomeIcon icon={faRotateRight} /> 테스트 다시하기
-        </button>
+        <div className="link-icon-box">
+          <input
+            type="button"
+            id="btnKakao"
+            className="link-icon kakao"
+            onClick={() => handleShare("kakaotalk")}
+          />
+          <input
+            type="button"
+            id="btnTwitter"
+            className="link-icon twitter"
+            onClick={() => handleShare("twitter")}
+          />
+          <input
+            type="button"
+            id="btnFacebook"
+            className="link-icon facebook"
+            onClick={() => handleShare("facebook")}
+          />
+        </div>
+        <div className="button_box">
+          <button
+            style={{ color: "#8834db" }}
+            className="button survey-button"
+            type="button"
+            onClick={handleSuggestionButtonClick}
+          >
+            {baumannType}의 추천 스킨케어 루틴
+          </button>
+        </div>
+
+        <div className="button_box">
+          <button
+            className="button survey-button"
+            type="button"
+            onClick={handleRetryButtonClick}
+          >
+            <FontAwesomeIcon icon={faRotateRight} /> 테스트 다시하기
+          </button>
+        </div>
       </div>
-    </div>
+    </Fragment>
   );
 };
 
-const fn_sendFB = (sns: string) => {
+const fn_sendFB = (sns: string, baumannType: string | null) => {
   const thisUrl = document.URL;
-  const snsTitle = "피부 MBTI 결과 공유하기";
+  const snsTitle = "나의 피부 타입은?";
+  const snsDescription = "피부TI 테스트 하러가기";
+  const imageUrl = `https://sigiskincare.vercel.app/_next/image?url=%2Fimg%2FskinType%2F${baumannType}.webp&w=384&q=75`;
 
   switch (sns) {
     case "facebook":
@@ -228,21 +236,22 @@ const fn_sendFB = (sns: string) => {
       window.open(
         `http://twitter.com/share?url=${encodeURIComponent(
           thisUrl
-        )}&text=${encodeURIComponent(snsTitle)}`,
+        )}&text=${encodeURIComponent(snsTitle)}&image=${encodeURIComponent(
+          imageUrl
+        )}`,
         "tweetPop",
         "width=486,height=286,scrollbars=yes"
       );
       break;
     case "kakaotalk":
-      // Create Kakao link share logic here
       if (window.Kakao && window.Kakao.isInitialized()) {
         window.Kakao.Link.createDefaultButton({
           container: "#btnKakao",
           objectType: "feed",
           content: {
             title: snsTitle,
-            description: snsTitle,
-            imageUrl: thisUrl, // Set a custom image URL if needed
+            description: snsDescription,
+            imageUrl: imageUrl,
             link: {
               mobileWebUrl: thisUrl,
               webUrl: thisUrl,

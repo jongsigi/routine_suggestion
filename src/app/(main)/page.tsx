@@ -21,7 +21,6 @@ export default function Page({ params }: { params: { channel: string } }) {
 
   return (
     <section className="mx-auto max-w-7xl pb-16 mt-4">
-      <h2 className="sr-only">Product list</h2>
       <SkinTypeList skintypes={skintypes} />
     </section>
   );
