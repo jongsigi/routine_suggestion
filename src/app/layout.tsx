@@ -5,11 +5,6 @@ import { ReactNode } from "react";
 
 const inter = Inter({ subsets: ["latin"] });
 
-export const metadata = {
-  title: "SiGi SkinCare",
-  description: "SiGi SkinCare",
-};
-
 export default function RootLayout({ children }: { children: ReactNode }) {
   return (
     <html lang="en" className="min-h-dvh">

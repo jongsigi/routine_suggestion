@@ -3,7 +3,7 @@ import { Header } from "@/ui/components/Header";
 
 export const metadata = {
 	title: "SiGi SkinCare",
-	description: "SiGi SkinCare.",
+	description: "K-Beauty Skincare Solution. Define your skintype and use right skincare routine.",
     other: {
 		"google-adsense-account": "ca-pub-1977720073946887", // Replace 'aaa' with your actual account ID
 	},

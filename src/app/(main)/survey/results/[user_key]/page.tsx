@@ -1,3 +1,4 @@
+
 "use client"; // This line ensures the component is treated as a Client Component
 
 import React, { useEffect, useState } from "react";
@@ -8,8 +9,7 @@ import { processUserAnswer } from "@/lib/processUserAnswer";
 import "@/lib/result.css"; // Ensure this file contains the necessary CSS
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faRotateRight } from "@fortawesome/free-solid-svg-icons";
-import { Fragment } from "react";
-import Head from "next/head"; // Import Head for meta tags
+import Head from "next/head"; // Import Head for dynamic metadata
 
 interface UserData {
   user_key: string;
@@ -96,11 +96,6 @@ const ResultsPage: React.FC = () => {
     return <div>{error}</div>;
   }
 
-  const thisUrl = document.URL;
-  const snsTitle = "나의 피부 타입은?";
-  const snsDescription = "피부TI 테스트 하러가기";
-  const imageUrl = `https://sigiskincare.vercel.app/_next/image?url=%2Fimg%2FskinType%2F${baumannType}.webp&w=384&q=75`;
-
   const handleSuggestionButtonClick = () => {
     router.push(`/skintypes/${baumannType}`);
   };
@@ -115,16 +110,7 @@ const ResultsPage: React.FC = () => {
   };
 
   return (
-    <Fragment>
-      <Head>
-        <meta property="og:title" content={snsTitle} />
-        <meta property="og:description" content={snsDescription} />
-        <meta property="og:image" content={imageUrl} />{" "}
-        {/* Dynamic image URL */}
-        <meta property="og:url" content={thisUrl} />
-        <meta property="og:type" content="website" />
-        <meta property="test" content="test" />
-      </Head>
+    <>
       <div className="survey-complete">
         <div className="title">
           <h1 className="survey-title">피부TI 테스트 결과</h1>
@@ -212,14 +198,14 @@ const ResultsPage: React.FC = () => {
           </button>
         </div>
       </div>
-    </Fragment>
+    </>
   );
 };
 
 const fn_sendFB = (sns: string, baumannType: string | null) => {
   const thisUrl = document.URL;
   const snsTitle = "나의 피부 타입은?";
-  const snsDescription = "피부TI 테스트 하러가기";
+  const snsDescription = "피부TI 스무고개 테스트 하러가기";
   const imageUrl = `https://sigiskincare.vercel.app/_next/image?url=%2Fimg%2FskinType%2F${baumannType}.webp&w=384&q=75`;
 
   switch (sns) {
@@ -236,9 +222,7 @@ const fn_sendFB = (sns: string, baumannType: string | null) => {
       window.open(
         `http://twitter.com/share?url=${encodeURIComponent(
           thisUrl
-        )}&text=${encodeURIComponent(snsTitle)}&image=${encodeURIComponent(
-          imageUrl
-        )}`,
+        )}&image=${encodeURIComponent(imageUrl)}`,
         "tweetPop",
         "width=486,height=286,scrollbars=yes"
       );
@@ -266,3 +250,5 @@ const fn_sendFB = (sns: string, baumannType: string | null) => {
 };
 
 export default ResultsPage;
+
+
