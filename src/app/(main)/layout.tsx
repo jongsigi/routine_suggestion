@@ -3,7 +3,7 @@ import { Header } from "@/ui/components/Header";
 
 export const metadata = {
 	title: "SiGi SkinCare",
-	description: "K-Beauty Skincare Solution. Define your skintype and use right skincare routine.",
+	description: "피부타입 검사부터 스킨케어 제품 추천까지",
 	openGraph: {
 	  type: "website",
 	  url: "https://sigiskincare.store",
