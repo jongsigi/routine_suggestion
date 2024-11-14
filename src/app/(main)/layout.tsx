@@ -8,7 +8,7 @@ export const metadata = {
 	  type: "website",
 	  url: "https://sigiskincare.store",
 	  title: "SiGi SkinCare",
-	  description: "K-Beauty Skincare Solution. Define your skintype and use right skincare routine.",
+	  description: "피부타입 검사부터 스킨케어 제품 추천까지",
 	  images: [
 		{
 		  url: "/img/share.webp", // Place this image in the public folder
@@ -21,7 +21,7 @@ export const metadata = {
 	twitter: {
 	  card: "summary_large_image",
 	  title: "SiGi SkinCare",
-	  description: "K-Beauty Skincare Solution. Define your skintype and use right skincare routine.",
+	  description: "피부타입 검사부터 스킨케어 제품 추천까지",
 	  images: ["/img/share.webp"], // This should match your Open Graph image
 	},
 	other: {
