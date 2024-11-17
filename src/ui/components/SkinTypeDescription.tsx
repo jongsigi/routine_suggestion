@@ -88,7 +88,7 @@ export function SkinTypeDescription({ matchingType }: { matchingType: any }) {
             Enhancing Ingredients : {skintype}
           </p>
 
-          <ul className="space-y-2 list-disc pl-5">
+          <ul className="space-y-2 list-disc pl-1">
             {SkinTypeDescription?.recommendedIngredients?.map(
               (ingredient, index) => (
                 <li
