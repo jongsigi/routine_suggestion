@@ -24,14 +24,14 @@ export default function ContactPage() {
 
     try {
       const result = await emailjs.send(
-        process.env.NEXT_PUBLIC_MAIL_SERVER_SERVICE_ID!,
-        process.env.NEXT_PUBLIC_MAIL_SERVER_TEMPLATE_ID!,
+        process.env.NEXT_PUBLIC_MAIL_SERVER_SERVICE_KEY!,
+        process.env.NEXT_PUBLIC_MAIL_SERVER_TEMPLATE_KEY!,
         {
           name: formData.name,
           email: formData.email,
           message: formData.message,
         },
-        process.env.NEXT_PUBLIC_MAIL_SERVER_USER_ID!
+        process.env.NEXT_PUBLIC_MAIL_SERVER_USER_KEY!
       );
 
       if (result.status === 200) {
