@@ -79,21 +79,31 @@ export function SkinTypeDescription({ matchingType }: { matchingType: any }) {
           </div>
         </div>
       </div>
-      {/* <div className="flex flex-col gap-2 rounded-2xl bg-zinc-50 sm:px-8 px-4 text-sm sm:text-base mt-4">
+      <div className="flex flex-col gap-2 rounded-2xl bg-zinc-50 sm:px-8 px-4 text-sm sm:text-base mt-4 mb-6 pb-4">
         <div className="morning-routine">
           <h1 className="text-2xl sm:text-2xl tracking-tight font-bold max-w-fit inline-block capitalize mt-4">
-            Enhancing Ingredients : {skintype}
+            {skintype} 피부타입의 추천 성분
           </h1>
-          <p>
-            {SkinTypeDescription?.recommendedIngredients}
+          <p className="text-sm text-gray-500 mt-px mb-4">
+            Enhancing Ingredients : {skintype}
           </p>
-          <p>성분1</p>
-          <p>성분2</p>
-          <p>성분3</p>
-          <p>성분4</p>
-          <p>성분5</p>
+
+          <ul className="space-y-2 list-disc pl-5">
+            {SkinTypeDescription?.recommendedIngredients?.map(
+              (ingredient, index) => (
+                <li
+                  key={index}
+                  className="flex items-center text-sm text-gray-700"
+                >
+                  <span className="w-1.5 h-1.5 rounded-full bg-blue-500 mr-2"></span>{" "}
+                  {/* Custom bullet */}
+                  {ingredient}
+                </li>
+              )
+            )}
+          </ul>
         </div>
-      </div> */}
+      </div>
     </div>
   );
 }
