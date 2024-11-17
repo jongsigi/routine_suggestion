@@ -13,34 +13,53 @@ export default function ContactPage() {
   const [formData, setFormData] = useState<FormData>({ name: "", email: "", message: "" });
   const [submitted, setSubmitted] = useState(false);
   const [error, setError] = useState<string | null>(null);
+  const [loading, setLoading] = useState(false); // To track the loading state
 
+  // Handle changes in form inputs
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
   };
 
+  // Handle form submission
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setError(null);
+    setLoading(true); // Set loading to true when submitting
+
+    // Ensure environment variables are available
+    const serviceKey = process.env.NEXT_PUBLIC_MAIL_SERVER_SERVICE_KEY;
+    const templateKey = process.env.NEXT_PUBLIC_MAIL_SERVER_TEMPLATE_KEY;
+    const userKey = process.env.NEXT_PUBLIC_MAIL_SERVER_USER_KEY;
+
+    if (!serviceKey || !templateKey || !userKey) {
+      setError("EmailJS configuration is missing. Please check your environment variables.");
+      setLoading(false); // Reset loading state if there is an error
+      return;
+    }
 
     try {
       const result = await emailjs.send(
-        process.env.NEXT_PUBLIC_MAIL_SERVER_SERVICE_KEY!,
-        process.env.NEXT_PUBLIC_MAIL_SERVER_TEMPLATE_KEY!,
+        serviceKey,
+        templateKey,
         {
           name: formData.name,
           email: formData.email,
           message: formData.message,
         },
-        process.env.NEXT_PUBLIC_MAIL_SERVER_USER_KEY!
+        userKey
       );
 
       if (result.status === 200) {
         setSubmitted(true);
+        setFormData({ name: "", email: "", message: "" }); // Clear form on successful submit
       } else {
         setError("Failed to send the message. Please try again.");
       }
     } catch (error) {
+      console.error("Error while sending email:", error); // Log the full error for debugging
       setError("An error occurred while sending the email. Please try again.");
+    } finally {
+      setLoading(false); // Reset loading state after the request
     }
   };
 
@@ -96,9 +115,10 @@ export default function ContactPage() {
           {error && <div className="text-red-600 text-center text-sm md:text-base">{error}</div>}
           <button
             type="submit"
-            className="w-full bg-blue-600 text-white font-medium py-2 md:py-3 rounded-lg hover:bg-blue-700 transition text-sm md:text-base"
+            disabled={loading} // Disable the button while loading
+            className={`w-full ${loading ? 'bg-gray-400' : 'bg-blue-600'} text-white font-medium py-2 md:py-3 rounded-lg hover:bg-blue-700 transition text-sm md:text-base`}
           >
-            Send Message
+            {loading ? "Sending..." : "Send Message"} {/* Show loading text */}
           </button>
         </form>
       )}
