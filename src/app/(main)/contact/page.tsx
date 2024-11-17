@@ -1,6 +1,7 @@
-"use client"; // Add this at the very top
+"use client";
 
 import { useState } from "react";
+import emailjs from "emailjs-com";
 
 type FormData = {
   name: string;
@@ -22,22 +23,24 @@ export default function ContactPage() {
     setError(null);
 
     try {
-      const response = await fetch("/api/contact", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
+      const result = await emailjs.send(
+        process.env.NEXT_PUBLIC_MAIL_SERVER_SERVICE_ID!,
+        process.env.NEXT_PUBLIC_MAIL_SERVER_TEMPLATE_ID!,
+        {
+          name: formData.name,
+          email: formData.email,
+          message: formData.message,
         },
-        body: JSON.stringify(formData),
-      });
+        process.env.NEXT_PUBLIC_MAIL_SERVER_USER_ID!
+      );
 
-      if (response.ok) {
+      if (result.status === 200) {
         setSubmitted(true);
       } else {
-        const { message } = await response.json();
-        setError(message || "Failed to send message.");
+        setError("Failed to send the message. Please try again.");
       }
     } catch (error) {
-      setError("An error occurred. Please try again later.");
+      setError("An error occurred while sending the email. Please try again.");
     }
   };
 
