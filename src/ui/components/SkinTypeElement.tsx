@@ -24,13 +24,13 @@ export function SkinTypeElement({
               sizes={"256px"}
             />
           )}
-          <div className="mt-2 flex justify-center">
+          {/* <div className="mt-2 flex justify-center">
             <div>
               <h3 className="mt-1 text-sm font-semibold text-neutral-900">
                 {skintype.name}
               </h3>
             </div>
-          </div>
+          </div> */}
         </div>
       </Link>
     </li>
