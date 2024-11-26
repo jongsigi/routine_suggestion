@@ -2,30 +2,40 @@
       "navLinks": [
         {
           "id": "1",
-          "name": "피부TI TEST",
+          "name": "피부TI 테스트",
           "level": 1,
           "category": {
             "id": "cat1",
             "slug": "survey",
-            "name": "피부TI TEST"
+            "name": "피부TI 테스트"
           }
         },
         {
           "id": "2",
-          "name": "SkinType",
+          "name": "피부TI란?",
           "level": 1,
           "category": {
             "id": "cat2",
             "slug": "",
-            "name": "SkinType"
+            "name": "피부TI란?"
           }
         },
         {
           "id": "3",
-          "name": "contact",
+          "name": "루틴 체크!",
           "level": 1,
           "category": {
             "id": "cat3",
+            "slug": "routinecheck",
+            "name": "루틴 체크!"
+          }
+        },
+        {
+          "id": "4",
+          "name": "contact",
+          "level": 1,
+          "category": {
+            "id": "cat4",
             "slug": "contact",
             "name": "Contact"
           }
