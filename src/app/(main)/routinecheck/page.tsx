@@ -61,7 +61,7 @@ export default function SkinTypeForm() {
         나의 루틴 체크!
       </h1>
       <p className="text-sm text-center text-gray-600 mb-4">
-        여러분의 피부 타입과 제품 정보를 입력하여<br /> 성분들이 피부타입에 잘 맞는지 보여드립니다.
+        여러분의 피부 타입과 제품 정보를 입력하면<br /> 성분들이 피부타입에 잘 맞는지 보여드립니다.
       </p>
       {submitted ? (
         <div className="text-center text-green-600 font-medium">
@@ -120,7 +120,7 @@ export default function SkinTypeForm() {
               htmlFor="itemName"
               className="block text-lg font-medium text-gray-700"
             >
-              상품명!
+              상품명을 입력해주세요
             </label>
             <input
               type="text"
