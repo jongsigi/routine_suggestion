@@ -150,12 +150,10 @@ export default function SkinTypeForm() {
             >
               <button
                 type="button"
-                className="w-full py-3 text-white font-semibold bg-blue-600 hover:bg-blue-700 rounded-lg transition duration-200"
+                className="w-full py-3 text-sm text-white font-semibold bg-blue-600 hover:bg-blue-700 rounded-lg transition duration-200"
               >
-                <span className="text-sm">
-                  "루틴 체크!" 기능 업데이트 소식 받기 <br /> 12월 구현 예정
-                  (카카오톡으로 이동)
-                </span>
+                &quot;루틴 체크!&quot; 기능 업데이트 소식 받기 <br /> 12월 구현
+                예정 (카카오톡으로 이동)
               </button>
             </a>
           </div>
