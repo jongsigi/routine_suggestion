@@ -5,7 +5,6 @@ import Link from "next/link";
 
 export default function SkinTypeForm() {
   const [skinType, setSkinType] = useState("");
-  const [category, setCategory] = useState({ time: "", product: "" });
   const [itemName, setItemName] = useState("");
   const [error, setError] = useState<string | null>(null);
   const [submitted, setSubmitted] = useState(false);
@@ -16,11 +15,6 @@ export default function SkinTypeForm() {
     const value = e.target.value.toUpperCase();
     setSkinType(value);
     if (error) setError(null);
-  };
-
-  const handleCategoryChange = (e: React.ChangeEvent<HTMLSelectElement>) => {
-    const { name, value } = e.target;
-    setCategory({ ...category, [name]: value });
   };
 
   const handleItemNameChange = (e: React.ChangeEvent<HTMLInputElement>) => {
@@ -51,7 +45,7 @@ export default function SkinTypeForm() {
     setTimeout(() => {
       setIsSubmitting(false);
       setSubmitted(true);
-      console.log({ skinType, category, itemName });
+      console.log({ skinType, itemName });
     }, 2000);
   };
 
@@ -86,30 +80,6 @@ export default function SkinTypeForm() {
               className="w-full px-4 py-3 border border-gray-300 rounded-lg shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-600 transition duration-200"
               required
             />
-          </div>
-          <div className="flex space-x-4">
-            <div className="w-1/2">
-              <label
-                htmlFor="product"
-                className="block text-lg font-medium text-gray-700"
-              >
-                제품 카테고리는?
-              </label>
-              <select
-                id="product"
-                name="product"
-                value={category.product}
-                onChange={handleCategoryChange}
-                className="w-full px-4 py-3 border border-gray-300 rounded-lg shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-600 transition duration-200"
-                required
-              >
-                <option value="">Select Product</option>
-                <option value="클렌저">클렌저</option>
-                <option value="토너">토너</option>
-                <option value="세럼">세럼</option>
-                <option value="수분크림">수분크림</option>
-              </select>
-            </div>
           </div>
           <div>
             <label

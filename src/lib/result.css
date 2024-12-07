@@ -126,18 +126,6 @@
     animation: animate 1s 1s cubic-bezier(1, 0, 0.5, 1) forwards;
   }
   
-  /* .bar .progress_line span::before{
-    position: absolute;
-    content: "";
-    height: 0;
-    width: 0;
-    border: 7px solid transparent;
-    border-bottom-width: 0;
-    border-right-width: 0;
-    border-top-color: #000;
-    right: 0;
-    top: -10px;
-  } */
   
   .bar .progress_line .left_percent::after {
     display: flex; /* Use flexbox for centering */

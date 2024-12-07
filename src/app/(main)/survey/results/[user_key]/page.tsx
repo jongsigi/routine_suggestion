@@ -1,4 +1,3 @@
-
 "use client"; // This line ensures the component is treated as a Client Component
 
 import React, { useEffect, useState } from "react";
@@ -7,6 +6,7 @@ import { useParams } from "next/navigation";
 import { supabase } from "@/lib/supabase";
 import { processUserAnswer } from "@/lib/processUserAnswer";
 import "@/lib/result.css"; // Ensure this file contains the necessary CSS
+import "@/lib/survey_layout.css"; // Ensure this file contains the necessary CSS
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faRotateRight } from "@fortawesome/free-solid-svg-icons";
 import Head from "next/head"; // Import Head for dynamic metadata
@@ -29,9 +29,7 @@ const ResultsPage: React.FC = () => {
   const { user_key } = useParams();
 
   const [userData, setUserData] = useState<UserData | null>(null);
-  const [processedResults, setProcessedResults] = useState<number[] | null>(
-    null
-  );
+  const [processedResults, setProcessedResults] = useState<number[] | null>(null);
   const [baumannType, setBaumannType] = useState<string | null>(null);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
@@ -111,91 +109,103 @@ const ResultsPage: React.FC = () => {
 
   return (
     <>
-      <div className="survey-complete">
-        <div className="title">
-          <h1 className="survey-title">피부TI 테스트 결과</h1>
-        </div>
-
-        {baumannType && (
-          <p className="survey-result">
-            당신의 피부타입은{" "}
-            <span className="baumann-type">{baumannType}</span>
-          </p>
-        )}
-
-        <div className="skills_bar">
-          {processedResults ? (
-            processedResults.map((percent, index) => (
-              <div className="percent_box" key={index}>
-                <div className="bar">
-                  <div className="percent_value_box">
-                    <span className="left_percent_value">
-                      {baumannCategories[index][0]}
-                    </span>
-                    <span className="right_percent_value">
-                      {baumannCategories[index][1]}
-                    </span>
-                  </div>
-                  <div className="progress_line percent">
-                    <span
-                      className={
-                        percent > 50 ? "left_percent" : "right_percent"
-                      }
-                      style={{
-                        width: `${percent > 50 ? percent : 100 - percent}%`,
-                        transformOrigin: percent > 50 ? "left" : "right",
-                        [percent > 50 ? "left" : "right"]: 0,
-                      }}
-                      data-percent={percent > 50 ? percent : 100 - percent}
-                    ></span>
-                  </div>
-                </div>
+      <div className="container">
+        <div className="screen">
+          <div className="screen__content">
+            <div className="survey-complete">
+              <div className="title">
+                <h1 className="survey-title">피부TI 테스트 결과</h1>
               </div>
-            ))
-          ) : (
-            <div>No processed results available.</div>
-          )}
-        </div>
 
-        <div className="link-icon-box">
-          <input
-            type="button"
-            id="btnKakao"
-            className="link-icon kakao"
-            onClick={() => handleShare("kakaotalk")}
-          />
-          <input
-            type="button"
-            id="btnTwitter"
-            className="link-icon twitter"
-            onClick={() => handleShare("twitter")}
-          />
-          <input
-            type="button"
-            id="btnFacebook"
-            className="link-icon facebook"
-            onClick={() => handleShare("facebook")}
-          />
-        </div>
-        <div className="button_box">
-          <button
-            style={{ color: "#8834db" }}
-            className="button survey-button"
-            type="button"
-            onClick={handleSuggestionButtonClick}
-          >
-            {baumannType}의 추천 스킨케어 루틴
-          </button>
-        </div>
+              {baumannType && (
+                <p className="survey-result">
+                  당신의 피부타입은{" "}
+                  <span className="baumann-type">{baumannType}</span>
+                </p>
+              )}
 
-        <div className="button_box">
-          <button
-            className="button survey-button"
-            type="button"
-            onClick={handleRetryButtonClick}
-          >
-            <FontAwesomeIcon icon={faRotateRight} /> 테스트 다시하기
-          </button>
+              <div className="skills_bar">
+                {processedResults ? (
+                  processedResults.map((percent, index) => (
+                    <div className="percent_box" key={index}>
+                      <div className="bar">
+                        <div className="percent_value_box">
+                          <span className="left_percent_value">
+                            {baumannCategories[index][0]}
+                          </span>
+                          <span className="right_percent_value">
+                            {baumannCategories[index][1]}
+                          </span>
+                        </div>
+                        <div className="progress_line percent">
+                          <span
+                            className={
+                              percent > 50 ? "left_percent" : "right_percent"
+                            }
+                            style={{
+                              width: `${percent > 50 ? percent : 100 - percent}%`,
+                              transformOrigin: percent > 50 ? "left" : "right",
+                              [percent > 50 ? "left" : "right"]: 0,
+                            }}
+                            data-percent={percent > 50 ? percent : 100 - percent}
+                          ></span>
+                        </div>
+                      </div>
+                    </div>
+                  ))
+                ) : (
+                  <div>No processed results available.</div>
+                )}
+              </div>
+
+              <div className="link-icon-box">
+                <input
+                  type="button"
+                  id="btnKakao"
+                  className="link-icon kakao"
+                  onClick={() => handleShare("kakaotalk")}
+                />
+                <input
+                  type="button"
+                  id="btnTwitter"
+                  className="link-icon twitter"
+                  onClick={() => handleShare("twitter")}
+                />
+                <input
+                  type="button"
+                  id="btnFacebook"
+                  className="link-icon facebook"
+                  onClick={() => handleShare("facebook")}
+                />
+              </div>
+              <div className="button_box">
+                <button
+                  style={{ color: "#8834db" }}
+                  className="button survey-button"
+                  type="button"
+                  onClick={handleSuggestionButtonClick}
+                >
+                  {baumannType}의 추천 스킨케어 루틴
+                </button>
+              </div>
+
+              <div className="button_box">
+                <button
+                  className="button survey-button"
+                  type="button"
+                  onClick={handleRetryButtonClick}
+                >
+                  <FontAwesomeIcon icon={faRotateRight} /> 테스트 다시하기
+                </button>
+              </div>
+            </div>
+          </div>
+          <div className="screen__background">
+            <span className="screen__background__shape screen__background__shape4"></span>
+            <span className="screen__background__shape screen__background__shape3"></span>
+            <span className="screen__background__shape screen__background__shape2"></span>
+            <span className="screen__background__shape screen__background__shape1"></span>
+          </div>
         </div>
       </div>
     </>
@@ -250,5 +260,3 @@ const fn_sendFB = (sns: string, baumannType: string | null) => {
 };
 
 export default ResultsPage;
-
-
