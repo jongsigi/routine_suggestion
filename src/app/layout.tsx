@@ -49,6 +49,15 @@ export default function RootLayout({ children }: { children: ReactNode }) {
           }}
         />
         {/* End Google Tag Manager */}
+
+        {/* Google AdSense */}
+        <Script
+          id="adsense-script"
+          src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1977720073946887"
+          strategy="lazyOnload"
+          crossOrigin="anonymous"
+        />
+        {/* End Google AdSense */}
       </head>
       <body className={`${inter.className} min-h-dvh`}>
         {/* Google Tag Manager (noscript) */}
