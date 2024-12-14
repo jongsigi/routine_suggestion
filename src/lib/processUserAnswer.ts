@@ -1,8 +1,9 @@
-import { supabase } from "@/lib/supabase"; // Import supabase instance
+import { supabase } from "@/lib/supabase";
 
-const numAnswer = 4; // Number of possible answers per question (0 to 3)
+const numAnswer = 4; // Number of possible answers per question (e.g., 0 to 3)
+const numQuestions = 20; // Total number of questions
 
-// Function to fetch answer weights
+// Function to fetch the weight matrix from the database
 const fetchAnswerWeights = async (): Promise<number[][]> => {
   const { data, error } = await supabase
     .from("answer_weight")
@@ -13,25 +14,37 @@ const fetchAnswerWeights = async (): Promise<number[][]> => {
     throw new Error(`Error fetching answer weights: ${error.message}`);
   }
 
-  const weightMatrix: number[][] = data.map((row: any) => {
-    return [
-      row.Oily, // Should now be 0 or a valid value
-      row.Dry,
-      row.Sensitive,
-      row.Resistant,
-      row.Pigmented,
-      row.Non_Pigmented,
-      row.Wrinkle,
-      row.Tight,
-    ];
-  });
-
-  return weightMatrix;
+  // Transform data into a matrix for calculations
+  return data.map((row: any) => [
+    row.Oily,
+    row.Dry,
+    row.Sensitive,
+    row.Resistant,
+    row.Pigmented,
+    row.Non_Pigmented,
+    row.Wrinkle,
+    row.Tight,
+  ]);
 };
 
-// Function to convert matrix result to Baumann type
+// Function to construct a binary list
+const generateBinaryList = (
+  answers: number[],
+  method: "total" | "meta"
+): number[] => {
+  const binaryList = new Array(numQuestions * numAnswer).fill(0);
+
+  answers.forEach((answer, questionIndex) => {
+    if (method === "meta" && questionIndex % 5 !== 0) return; // Only every 5th question for "meta"
+    const binaryIndex = questionIndex * numAnswer + answer;
+    binaryList[binaryIndex] = 1; // Mark the specific index as 1
+  });
+
+  return binaryList;
+};
+
+// Function to calculate the Baumann type from matrix results
 const calculateBaumannType = (result: number[]): string => {
-  const baumannTypeList = [];
   const baumannCategories = [
     ["O", "D"],
     ["S", "R"],
@@ -39,157 +52,110 @@ const calculateBaumannType = (result: number[]): string => {
     ["W", "T"],
   ];
 
-  // Iterating over each pair (Oily-Dry, Sensitive-Resistant, etc.)
-  for (let i = 0; i < result.length / 2; i++) {
-    const firstValue = result[2 * i];
-    const secondValue = result[2 * i + 1];
+  const baumannTypeList = baumannCategories.map(([positive, negative], index) =>
+    result[2 * index] > result[2 * index + 1] ? positive : negative
+  );
 
-    if (firstValue > secondValue) {
-      baumannTypeList.push(baumannCategories[i][0]); // First value dominates
-    } else {
-      baumannTypeList.push(baumannCategories[i][1]); // Second value dominates
-    }
-  }
-
-  // Convert to string like "OSPN"
   return baumannTypeList.join("");
 };
 
-// Function to calculate percentages between pairs of numbers
+// Function to perform the weighted matrix multiplication
+const calculateAnswerMatrix = async (
+  binaryList: number[],
+  numAnswer: number
+): Promise<{ result: number[]; baumannType: string }> => {
+  const weightMatrix = await fetchAnswerWeights();
+
+  const result = new Array(8).fill(0); // Predefine output length (8 categories)
+  binaryList.forEach((binaryValue, binaryIndex) => {
+    if (binaryValue === 1) {
+      // Apply weights when binaryValue is 1
+      weightMatrix[binaryIndex].forEach((weight, weightIndex) => {
+        result[weightIndex] += weight;
+      });
+    }
+  });
+
+  const baumannType = calculateBaumannType(result);
+  return { result, baumannType };
+};
+
+// Calculate percentages for the result
 const calculatePercentages = (arr: number[]): number[] => {
-  const percentages: number[] = [];
-
-  // Iterate through the list except for the last item
+  const percentages = [];
   for (let i = 0; i < arr.length - 1; i += 2) {
-    const currentItem = arr[i];
-    const nextItem = arr[i + 1];
-
-    // Calculate the percentage, multiply by 100, and round to the nearest integer
-    const percentage = Math.round((currentItem / (currentItem + nextItem)) * 100);
+    const percentage = Math.round(
+      (arr[i] / (arr[i] + arr[i + 1])) * 100
+    );
     percentages.push(percentage);
   }
-
   return percentages;
 };
 
-// Function to update the baumann_type in Supabase
 const updateBaumannType = async (
   userKey: string,
   baumannType: string,
   column: string
 ): Promise<void> => {
-  if (column === "baumannType") {
-    const { data, error } = await supabase
-      .from("user")
-      .update({ baumann_type: baumannType })
-      .eq("user_key", userKey);
-  
-    if (error) {
-      console.error("Error details:", error);
-      throw new Error(`Error updating baumann_type: ${error.message}`);
-    }
-  } else if (column === "metaBaumannType") {
-    const { data, error } = await supabase
-      .from("user")
-      .update({ meta_baumann_type: baumannType }) // meta_baumann_type 업데이트
-      .eq("user_key", userKey);
-  
-    if (error) {
-      console.error("Error details:", error);
-      throw new Error(`Error updating meta_baumann_type: ${error.message}`);
-    }
+  // Define columnMap with explicit types
+  const columnMap: { [key in 'baumannType' | 'metaBaumannType']: string } = {
+    baumannType: "baumann_type",
+    metaBaumannType: "meta_baumann_type",
+  };
+
+  // Check if the column passed exists in the columnMap
+  if (!(column in columnMap)) {
+    throw new Error(`Invalid column name: ${column}`);
+  }
+
+  // Ensure column is a valid key of columnMap for proper dynamic key access
+  const mappedColumn = columnMap[column as keyof typeof columnMap];
+
+  // Perform the update
+  const { data, error } = await supabase
+    .from("user")
+    .update({ [mappedColumn]: baumannType }) // using the validated mapped column name
+    .eq("user_key", userKey);
+
+  // Handle any error during the update
+  if (error) {
+    console.error("Error details:", error);
+    throw new Error(`Error updating ${mappedColumn}: ${error.message}`);
   }
 };
 
-// Define types for user answers and result
-type UserAnswers = number[];
-type WeightMatrix = number[][];
 
-// Define the return type for processUserAnswer
-interface ProcessUserAnswerResult {
-  processedData: number[]; // An array of processed data
-  baumannType: string; // A string for the baumann type
-}
-
-// 바우만 타입 변환 중 반복 과정 함수화
-async function calculateAnswerMatrix(
-  userAnswers: UserAnswers,
-  numAnswer: number
-): Promise<{ result: number[]; baumannType: string }> {
-  // Step 2: Convert userAnswers into a binary list
-  const binaryList: number[] = [];
-  userAnswers.forEach((answer) => {
-    const binaryAnswer = new Array(numAnswer).fill(0);
-    binaryAnswer[answer] = 1;
-    binaryList.push(...binaryAnswer);
-  });
-
-  // Step 3: Fetch answer weights
-  const weightMatrix: WeightMatrix = await fetchAnswerWeights();
-
-  // Step 4: Perform matrix multiplication
-  const result: number[] = new Array(8).fill(0);
-  for (let i = 0; i < weightMatrix.length; i++) {
-    for (let j = 0; j < weightMatrix[i].length; j++) {
-      result[j] += binaryList[i] * weightMatrix[i][j];
-    }
-  }
-
-  // Step 5: Calculate Baumann type based on result
-  const baumannType = calculateBaumannType(result);
-
-  // Return both result and baumannType
-  return {
-    result,
-    baumannType,
-  };
-}
-
-// Function to process user answers and update baumann_type
-export const processUserAnswer = async (userData: any): Promise<ProcessUserAnswerResult> => {
+// Main processing function
+export const processUserAnswer = async (userData: any) => {
   const userKey = userData.user_key;
+  if (!userKey) throw new Error("User key is missing!");
 
-  if (!userKey) {
-    throw new Error("User key is missing!");
-  }
-
-  // Step 1: Extract user answers into an array
+  // Extract user answers
   const userAnswers: number[] = [];
-  for (let i = 0; i < 20; i++) {
+  for (let i = 0; i < numQuestions; i++) {
     const answer = userData[`answer_${i}`];
     if (answer !== undefined) {
       userAnswers.push(answer);
     }
   }
 
-  // Meta Data를 위한 처리
-  const metaUserAnswers: number[] = [];
-  for (let i = 0; i < 20; i++) {
-    if (i % 5 === 0) {
-      const metaAnswer = userData[`answer_${i}`];
-      if (metaAnswer !== undefined) {
-        metaUserAnswers.push(metaAnswer);
-      }
-    }
-  }
-  
-  // Calculate answer matrix and get both result and baumannType
-  const { result, baumannType } = await calculateAnswerMatrix(
-    userAnswers,
+  // Generate binary lists
+  const binaryListUser = generateBinaryList(userAnswers, "total");
+  const binaryListMeta = generateBinaryList(userAnswers, "meta");
+
+  // Perform matrix calculations
+  const { result: userResult, baumannType } = await calculateAnswerMatrix(
+    binaryListUser,
     numAnswer
   );
+  const { result: metaResult, baumannType: metaBaumannType } =
+    await calculateAnswerMatrix(binaryListMeta, numAnswer);
 
-  // Note: you likely want to use a different set of answers for the meta calculation
-  const { baumannType: metabaumannType } = await calculateAnswerMatrix(
-    metaUserAnswers,
-    numAnswer
-  );
-
-  const processedData: number[] = calculatePercentages(result);
-
-  // Step 6 : Update Baumann type in the user table in Supabase
+  // Update the database
   await updateBaumannType(userKey, baumannType, "baumannType");
-  await updateBaumannType(userKey, metabaumannType, "metaBaumannType");
+  await updateBaumannType(userKey, metaBaumannType, "metaBaumannType");
 
-  return { processedData, baumannType }; // Return the result of matrix multiplication
+  // Return processed percentages
+  const processedData = calculatePercentages(userResult);
+  return { processedData, baumannType };
 };

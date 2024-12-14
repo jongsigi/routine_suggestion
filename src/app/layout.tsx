@@ -1,5 +1,4 @@
 import { Inter } from "next/font/google";
-import Script from "next/script";
 import "./globals.css";
 import { ReactNode } from "react";
 
@@ -7,7 +6,7 @@ const inter = Inter({ subsets: ["latin"] });
 
 export const metadata = {
   title: "SiGi SkinCare",
-  description: "피부타입 검사부터 스킨케어 제품 추천까지",
+  description: "피부MBTI : 피부타입 검사부터 스킨케어 제품 추천까지",
   openGraph: {
     type: "website",
     url: "https://sigiskincare.store",
@@ -34,10 +33,16 @@ export default function RootLayout({ children }: { children: ReactNode }) {
   return (
     <html lang="en" className="min-h-dvh">
       <head>
+        {/* Google AdSense */}
+        <script
+          src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1977720073946887"
+          crossOrigin="anonymous"
+          async
+        ></script>
+        {/* End Google AdSense */}
+
         {/* Google Tag Manager */}
-        <Script
-          id="gtm-script"
-          strategy="beforeInteractive"
+        <script
           dangerouslySetInnerHTML={{
             __html: `
               (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
@@ -47,17 +52,8 @@ export default function RootLayout({ children }: { children: ReactNode }) {
               })(window,document,'script','dataLayer','GTM-NGXP6VXK');
             `,
           }}
-        />
+        ></script>
         {/* End Google Tag Manager */}
-
-        {/* Google AdSense */}
-        <Script
-          id="adsense-script"
-          src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1977720073946887"
-          strategy="lazyOnload"
-          crossOrigin="anonymous"
-        />
-        {/* End Google AdSense */}
       </head>
       <body className={`${inter.className} min-h-dvh`}>
         {/* Google Tag Manager (noscript) */}
