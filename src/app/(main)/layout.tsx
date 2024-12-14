@@ -49,13 +49,6 @@ export default function MainLayout({ children }: { children: ReactNode }) {
           }}
         ></script>
         {/* End Google Tag Manager */}
-        
-        {/* Google AdSense */}
-        <script
-          src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1977720073946887"
-          async
-          crossOrigin="anonymous"
-        ></script>
 
         {/* Other Meta Tags or CSS or JS imports */}
       </head>
