@@ -27,6 +27,9 @@ export const metadata = {
     description: "피부타입 검사부터 스킨케어 제품 추천까지",
     images: ["/img/share.webp"],
   },
+  other: {
+	  "google-adsense-account": "ca-pub-1977720073946887", // Replace 'aaa' with your actual account ID
+	},
 };
 
 export default function RootLayout({ children }: { children: ReactNode }) {
