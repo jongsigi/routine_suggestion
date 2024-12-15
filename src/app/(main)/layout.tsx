@@ -4,7 +4,7 @@ import { Header } from "@/ui/components/Header";
 export default function RootLayout(props: { children: ReactNode }) {
   return (
     <>
-      <head>
+      <body>
         {/* Google AdSense */}
         <script
           async
@@ -12,7 +12,7 @@ export default function RootLayout(props: { children: ReactNode }) {
           crossOrigin="anonymous" // Note the corrected camelCase: crossOrigin
         />
         {/* End Google AdSense */}
-      </head>
+      </body>
       <Header />
       <div className="flex min-h-[calc(100dvh-64px)] flex-col">
         <main className="flex-1">{props.children}</main>
