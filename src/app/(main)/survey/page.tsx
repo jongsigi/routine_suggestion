@@ -12,7 +12,7 @@ const SurveyPage = () => {
 
     if (!userKey) {
       // If user_key is not found, redirect to the user_info page
-      router.push("/survey/user_info");
+      router.push("/");
     } else {
       // Otherwise, redirect to the question page
       router.push("/survey/question");
